@@ -15,3 +15,4 @@ top--> dynamic real-time ruuning processes <br>
 htop--> can scroll verticle as wel as horizentally to see more effectively <br>
 ps aux --> active ruuning process in detailed <br>
 
+for kowns more about command /bin folder contains the all command and we cam use man command to see the manual. 
