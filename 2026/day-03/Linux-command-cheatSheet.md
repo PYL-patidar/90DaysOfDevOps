@@ -6,6 +6,7 @@ Process Managment commands
  5) kill --> used to kill a perticuler process
 
 Networking commands <br>
+
  6) ip --> give ip address for a perticular device
  7) ping--> send data packets in network check routing properly or not
  8) curl--> search a url for the internet
