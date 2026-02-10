@@ -1,6 +1,5 @@
 There are many ways to record the logs and output
-We use,
- > , >> or command | tee output.txt
+We use -->  > , >> or command | tee output.txt
 
 Process Commands:
 1. ps aux > output.txt
