@@ -19,4 +19,4 @@ Mon - sut-calss ptacticle + task(after revision) --> post 1 (✔) (30 minutes wi
 Tus - sun-class practicle + task(after revision) --> post 2 (✔) (30 minutes with discord) <br>
 Wed - task (doubt cleasing session) (✔) (30 minutes with discord) <br>
 Thur - task --> post 3 (✔) (30 minutes with discord) <br>
-Fri - task (✖) (30 minutes with discord) <br>
+Fri - task (✔) (30 minutes with discord) <br>
