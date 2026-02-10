@@ -38,6 +38,7 @@ Observed : Sufficient Memory Available <br>
 Command : df -h <br>
 Output : /dev/root    6.8G size, 1.9G Used, 4.9G Avail  29% use, / Mounted on <br>
 Observed : Root partition more than 70% Available <br>
+  <br>
 Command : iostat <br>
 Output : avg-cpu:  %user   %nice  %system %iowait  %steal   %idle 
                    0.12    0.00   0.06    0.02     0.01    99.79 
@@ -48,7 +49,7 @@ Observation : CPU idle= 99.79% -> which is healthy. iowait= 0.02% -> small perce
 Command : sudo ss -tulpn | grep sshd<br>
 OutPut : tcp   LISTEN 0      4096              0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=899,fd=3),("systemd",pid=1,fd=181))
   <br>
-Observation : ssh is listening on port 22
+Observation : ssh is listening on port 22 <br>
 <br>
 Command : ping <ip-address> <br>
 Output : 64 bytes from 172.31.32.251: icmp_seq=36 ttl=64 time=0.028 ms
@@ -60,6 +61,7 @@ Observed : send ICMP ECHO_REQUEST to network hosts  <br>
 <h2>Logs</h2> <br>
 Commands: journalctl -u ssh -n 50 <br >
 Observation : Last 50 lines shows normal authentication attempts no errors or warnings. <br>
+  <br>
 Command : tail -n 50 /var/log/<file>.log <br>
 Observation : Recent login attempts record. No suspicious activity detected. <br>
 <br>
