@@ -19,7 +19,7 @@ Observerd : print distribution-specific information
 <br>
 <h2>Filesystem sanity:</h2>
 Command : mkdir /tmp/runbook-demo<br>
-Output : Directory created Successfully
+Output : Directory created Successfully<br>
 <br>
 Command : cp /etc/hosts /tmp/runbook-demo/hosts-copy && ls -l /tmp/runbook-demo <br>
 Output : -rw-r--r-- 1 ubuntu ubuntu 221 Feb 10 09:18 hosts-copy <br>
