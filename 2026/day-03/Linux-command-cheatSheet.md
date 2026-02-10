@@ -5,13 +5,13 @@ Process Managment commands
  4) htop--> real-time processes with allows to scroll verically & horizontally
  5) kill --> used to kill a perticuler process
 
-Networking commands
+Networking commands <br>
  6) ip --> give ip address for a perticular device
  7) ping--> send data packets in network check routing properly or not
  8) curl--> search a url for the internet
  9) dig --> perform DNS lookups and display report of the DNS servers
  
- File system commands
+ File system commands<br>
  
  10) mkdir --> make a directory
  11) touch --> create a file
