@@ -4,9 +4,9 @@ Step by Step guide for troubleshooting a service <br>
 for record the output run a script "session.log" and then all commands run 
 <br>
 <h2>Environment Basics:</h2>
-Command : uname -a 
-Output : Linux ip-172-31-32-251 6.14.0-1018-aws #18~24.04.1-Ubuntu SMP Mon Nov 24 19:46:27 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
-Obsered : display all system informatioon
+Command : uname -a <br>
+Output : Linux ip-172-31-32-251 6.14.0-1018-aws #18~24.04.1-Ubuntu SMP Mon Nov 24 19:46:27 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux <br>
+Obsered : display all system informatioon <br>
 <br>
 Command : lsb_release -a 
 Output : 
