@@ -6,7 +6,7 @@ for record the output run a script "session.log" and then all commands run
 <h2>Environment Basics:</h2>
 Command : uname -a <br>
 Output : Linux ip-172-31-32-251 6.14.0-1018-aws #18~24.04.1-Ubuntu SMP Mon Nov 24 19:46:27 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux <br>
-Obsered : display all system informatioon <br>
+Observed : display all system informatioon <br>
 <br>
 Command : lsb_release -a <br>
 Output :
@@ -23,7 +23,7 @@ Output : Directory created Successfully
 <br>
 Command : cp /etc/hosts /tmp/runbook-demo/hosts-copy && ls -l /tmp/runbook-demo <br>
 Output : -rw-r--r-- 1 ubuntu ubuntu 221 Feb 10 09:18 hosts-copy <br>
-Obsered : Copied the files from /etc/hosts. Filesystem is writable.
+Observed : Copied the files from /etc/hosts. Filesystem is writable.
 <br>
 <h2>CPU / Memory </h2>
 Command : ps -o pid, pcpu, pmem, comm -p <pid>
