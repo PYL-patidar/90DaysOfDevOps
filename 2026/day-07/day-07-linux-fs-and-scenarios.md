@@ -1,4 +1,4 @@
-# part 1
+# -- Part 1 --
 # Linux File system hierachy
 
 - '/'(root) :  The root directory (/) is the top-level directory of the entire Linux file system hierarchy, containing all system files, partitions, and user data.
@@ -16,23 +16,21 @@
 **/var/www** : commonly used to host website data for web server. <br>
 **/var/cache** : Holds application cache data to speed up execution. <br>
 **/var/run** : Stores temporary data about the system running since last boot. <br>
+**/var/spool** : Manages queued tasks like print jobs or emails. 
 
 - '/temp' : "temp" typically refers to the CPU temperature or the temporary file directory (/tmp).
 - '/usr' : The /usr directory (which has stood both for UNIX source repository and UNIX system resources) is intended to be a read-only directory that stores files that aren't required to boot the system
 - '/opt' : This directory is reserved for all the software and add-on packages that are not part of the default installation
 
 
-**/var/spool** : Manages queued tasks like print jobs or emails.
-
-
-# part 2
-# Scenario Based practice 
+# -- Part 2 --
+# Scenario Based practice
 **Scenario 1**
-- step 1 : systemctl status myapp 
+- step 1 : systemctl status myapp <br> 
 Why : To check the current status running or failed
 
-- step 2 : systemctl is-enabled myapp
+- step 2 : systemctl is-enabled myapp <br>
 Why : check service start after reboot
 
-- step 3 : journalctl -u myapp -n 50 
+- step 3 : journalctl -u myapp -n 50 <br> 
 Why : To see the logs 
