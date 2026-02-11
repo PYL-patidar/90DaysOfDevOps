@@ -34,3 +34,17 @@ Why : check service start after reboot
 
 - step 3 : journalctl -u myapp -n 50 <br> 
 Why : To see the logs 
+
+**Scenario 2**
+- step 1 : top
+Why : To see the currently active process snapshot
+
+- step 2 : htop
+Why : To see the currently active process in more formated way
+
+- step 3 : ps aux --sort=-%cpu | head -n 50
+Why : sort the output of current running process based on cpu usage
+
+** Scenario 3**
+- step 1 : journalctl -u docker
+Why : To see the log of docker service
