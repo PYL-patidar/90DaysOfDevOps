@@ -1,6 +1,6 @@
 # Linux File system hierachy
 
-- '/'(root) :  The root directory (/) is the top-level directory of the entire Linux file system hierarchy, containing all system files, partitions, and user data.
+- ' / '(root) :  The root directory (/) is the top-level directory of the entire Linux file system hierarchy, containing all system files, partitions, and user data.
 - '/root' :  The /root directory is the specific home directory for the root user (administrator).
    Think of / as the root of the tree, and /root as a folder located within it.
 - '/bin' :  /bin directories in Linux are dedicated areas for storing executable files, commonly known as binaries. These binaries are required for the execution of different commands and programs on a Linux system. The binary folders ensure that these executables are easily accessible to users.
