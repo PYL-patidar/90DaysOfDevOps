@@ -1,3 +1,4 @@
+# part 1
 # Linux File system hierachy
 
 - '/'(root) :  The root directory (/) is the top-level directory of the entire Linux file system hierarchy, containing all system files, partitions, and user data.
@@ -22,3 +23,16 @@
 
 
 **/var/spool** : Manages queued tasks like print jobs or emails.
+
+
+# part 2
+# Scenario Based practice 
+**Scenario 1**
+- step 1 : systemctl status myapp 
+Why : To check the current status running or failed
+
+- step 2 : systemctl is-enabled myapp
+Why : check service start after reboot
+
+- step 3 : journalctl -u myapp -n 50 
+Why : To see the logs 
