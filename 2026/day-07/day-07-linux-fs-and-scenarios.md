@@ -26,6 +26,7 @@
 # -- Part 2 --
 # Scenario Based practice
 **Scenario 1**
+### If any service failed what commnad will used to diagonised to this situation 
 - step 1 : systemctl status myapp <br> 
 Why : To check the current status running or failed
 
@@ -36,15 +37,41 @@ Why : check service start after reboot
 Why : To see the logs 
 
 **Scenario 2**
-- step 1 : top
+### Application server is slow which comand used for find process that hold high CPU utilization
+- step 1 : top <br>
 Why : To see the currently active process snapshot
 
-- step 2 : htop
-Why : To see the currently active process in more formated way
+- step 2 : htop <br>
+Why : To see the currently active process in more formatted way
 
-- step 3 : ps aux --sort=-%cpu | head -n 50
+- step 3 : ps aux --sort=-%cpu | head -n 50 <br>
 Why : sort the output of current running process based on cpu usage
 
-** Scenario 3**
-- step 1 : journalctl -u docker
+**Scenario 3**
+### where are the logs for docker service
+- step 1 : systemclt status docker <br>
+Why : To confire service running or not
+
+journalctl holds entire log files for services <br>
+- step 2 : journalctl -u docker <br>
 Why : To see the log of docker service
+
+- stepp 3 : journalctl -u docker -n 50 <br>
+Why : give top 50 number of line
+
+- step 4 : journalctl -u docker -f <br>
+  Why : give real time logs with -f flag
+
+  **Scenario 4**
+  - step 1 : check current permission <br>
+  Command : ls -l /home/user/backup.sh <br>
+  Output : -rw-rw-r-- 1 ubuntu ubuntu  0 Feb 12 16:44 hello.sh ('x' not available mean not execuable permission)
+
+- step 2 : add execute permisiion
+  Command : chmod +x /home/user/backup.sh
+
+- step 3 : varify it Worked
+  Command : ls -l /home/user/backup.sh
+  Output : -rwxrwxr-x 1 ubuntu ubuntu  0 Feb 12 16:44 hello.sh ('x' = executable)
+
+- step 4 : Try running it
