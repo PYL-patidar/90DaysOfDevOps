@@ -34,8 +34,8 @@ Output : docker active and enabled
 
 ## Part 4
 - Extract nginx logs
+
 - step 1 : To see the logs <br>
 Command : journalctl -u nginx -n 20 
-- step 2 : save logs
+- step 2 : save logs <br>
 Commands : journalctl -u nginx -n 20 | tee -a nginx-logs.txt
-- step 3 "  
