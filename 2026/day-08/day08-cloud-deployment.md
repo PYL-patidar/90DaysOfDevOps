@@ -1,3 +1,5 @@
+# Day 08 – Cloud Server Setup: Docker, Nginx & Web Deployment
+
 ## Part 1 
 - Launch Cloud instance : <br>
 Command : Create an instance <br>
