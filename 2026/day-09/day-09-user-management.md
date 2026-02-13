@@ -27,10 +27,10 @@ Output : Type new passwd and then retype
 - Varify : `cat /etc/group`
 
 ## Task 3 
-- Assign users to groups
+- Assign users to groups <br>
 tokyo --> devlopers <br>
 Command : `sudo usermod -aG devlopers tokyo` <br>
-barlin --> devloper + admins
-Command : `sudo useradd -aG devloper,admins barlin`
+barlin --> devloper + admins <br>
+Command : `sudo useradd -aG devloper,admins barlin` <br>
 professor --> admins
 Command : `sudo useradd -aG admins professor`
