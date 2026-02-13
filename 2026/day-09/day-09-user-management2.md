@@ -20,19 +20,24 @@
 ## Commands used :
 - Create Users:
 Commands : sudo useradd -m <user_name> <br>
-  - add user with directory 
+  add user with directory 
 Command : sudo passwd <user_name> <br>
-  - set password of user
+  set password of user
 
-- Create Group:
+- Create Group: <br>
 Command : sudo groupadd <group_name>
 
-- Add member to group
-Command : sudo usermod -aG <group_name> <user_name>
+- Add member to group <br>
+Command : sudo usermod -aG <group_name> <user_name> <br>
 
-- set group (change group)
+demo directory create for testing perpose (named dev-project) <br>
+- set group (change group) <br>
 Command : sudo chgrp <group_name> <dir_name>
 
+- set permission
+Command : sudo chmod 775 <dir_name>
+
+Test user enable for read, write and execute operation
 
 ```
 
