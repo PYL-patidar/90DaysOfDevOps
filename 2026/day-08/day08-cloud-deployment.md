@@ -5,16 +5,21 @@ Command : Connect with SSh
 
 ## Part 2
 - Install Nginx & Docker
+
 - step 1 : firstly update the system <br>
 Command : sudo apt update
+
 - step 2 : install nginx <br>
 Command : sudo apt install nginx
+
 - step 3 : Varify nginx <br>
 Command : systemctl status nginx <br>
 Output : nginx service acive and enabled
+
 - step 4 : Now install docker<br>
 Command : sudo install docker.io
-- step 5 : varify docker running <br>
+
+-  step 5 : varify docker running <br>
 Command : systemctl status docker <br>
 Output : docker active and enabled
 
