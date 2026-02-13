@@ -16,19 +16,20 @@ Command : sudo apt install nginx
 
 - step 3 : Varify nginx <br>
 Command : systemctl status nginx <br>
-Output : nginx service acive and enabled
+Output : nginx service active and enabled
 
-- step 4 : Now install docker<br>
+- step 4 : Next install docker<br>
 Command : sudo install docker.io
 
--  step 5 : varify docker running <br>
+- step 5 : varify docker running <br>
 Command : systemctl status docker <br>
 Output : docker active and enabled
 
 ## Part 3
-- Configure security group
-- step 1 : First check nginx can accessible from public ip and if not then go to step 2
-- step 2 : Go to security group and open port 80
+- Test Web access via public ip
+
+- step 1 : First check nginx can accessible from public ip and if not then configure the security group 
+- step 2 : Go to security group and open port 80 for all 0.0.0.0 
 - step 3 : reload browser now ngix running
 
 ## Part 4
