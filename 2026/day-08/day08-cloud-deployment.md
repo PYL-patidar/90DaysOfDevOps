@@ -30,7 +30,7 @@ Output : docker active and enabled
 
 - step 1 : First check nginx can accessible from public ip and if not then configure the security group 
 - step 2 : Go to security group and open port 80 for all 0.0.0.0 
-- step 3 : reload browser now ngix running
+- step 3 : reload browser now nginx running
 
 ## Part 4
 - Extract nginx logs
