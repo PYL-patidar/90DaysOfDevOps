@@ -35,5 +35,5 @@ Command : `sudo usermod -aG devlopers tokyo` <br>
 barlin --> devloper + admins <br>
 Command : `sudo useradd -aG devloper,admins barlin` <br>
 
-professor --> admins
-Command : `sudo useradd -aG admins professor`
+professor --> admins <br>
+Command : `sudo useradd -aG admins professor` <br>
