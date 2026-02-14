@@ -39,5 +39,10 @@ Command : sudo chmod 775 <dir_name>
 
 Test user enable for read, write and execute operation
 
+## I learned :
+how root user and other users are different to each others
+know about which can access group assign files
+permissions
+
 ```
 
