@@ -1,26 +1,33 @@
 ```
-# git setup & configure
-Comand : git --version
-Command : sudo apt install git jj
+# Git Setup & Configure
+
+- varifing git are already installed or not.
+Command : git --version
+
+- Install git (on Linux)
+Command : sudo apt install git
+
+- Configure 
 Command : git config --global user.name <user-name>
 Command : git config --global user.email <email>
 
+- varify
+Command : git config --list
+
 ## Initialize a git repository
+
 Command: git init
 
 ## Check git status
+
 Command: git status
 
-## tracking a file
+## Tracking a file
+
 Command : git add <file_name>
-COmmand : git commit -m "add commit message"
+Command : git commit -m "add commit message"
 
-## to see current all commmits and HEAD (For viewing commit history)
+## See complete commit history (HEAD)
 Command : git log
-
-##
-
-
-
 
 ```
