@@ -16,4 +16,7 @@ ANS: When we switch branches, Git updates the files to match the selected branch
 us only if there is no conflict; otherwise, Git asks us to commit or stash them.
 
 Q5) What is difference between `git switch` and `git checkout` ?
-ANS: switch only for switching one branch to another, whereas checkout switch branch along with resote the working tree files. 
+ANS: Switch only for switching one branch to another, whereas checkout switch branch along with resote the working tree files. 
+
+Q6) what is the difference between `origin` and `upstream`?
+ANS: `upstream` is the original remote repository owned by someone else, which we fork into our own profile. We work on our forked repository (origin), and whenever new changes are made in the original repository(upstream), we use upstream to sync and update our fork.
