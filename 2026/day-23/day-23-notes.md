@@ -14,3 +14,6 @@ ANS: In Git, HEAD is a pointer that refers to the current commit (or current bra
 Q4) What happens to your file when you switch branches?
 ANS: When we switch branches, Git updates the files to match the selected branch. If there are uncommitted changes, they move with
 us only if there is no conflict; otherwise, Git asks us to commit or stash them.
+
+Q5) What is difference between `git switch` and `git checkout` ?
+ANS: switch only for switching one branch to another, whereas checkout switch branch along with resote the working tree files. 
