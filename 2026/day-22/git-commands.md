@@ -37,7 +37,7 @@ Command : git branch
 - Create a new branch
 Command : git branch <branch_name>
 
-- Create a new branch with a existing branch and to switch
+- Switch and create new brach along with eisting woting tree files and commits 
 Command : git checkout -b <branch_name>
 
 - Switch one to another branch
@@ -45,6 +45,8 @@ Command : git switch <brach_name>
 
 - To delete branch
 Command : git branch -D <branch_name>
+
+
 
 
 
