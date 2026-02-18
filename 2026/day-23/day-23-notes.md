@@ -23,3 +23,9 @@ ANS: `upstream` is the original remote repository owned by someone else, which w
 
 Q7) git pull Vs git fetch
 ANS: The main difference is that the `git fetch` only downloads the changes form the remote repository to local reposiroty, and not add the changes to local files, while `git pull` downloads the changes and as well as then immediately integrates them into current working branch.
+
+Q8)clone Vs fork 
+ANS: `git clone` generally used for clone the complete repo into my local, whereas `git fork` used to copy someons's repository into our proile. 
+
+Q9) After forking, how do you keep your fork in sync with the original repo?
+ANS: The changes that are present on the upstream or remote repository to move their to own repository, there is a option available sync fork.
