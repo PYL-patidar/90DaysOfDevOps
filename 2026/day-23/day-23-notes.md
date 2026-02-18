@@ -27,5 +27,5 @@ ANS: The main difference is that the `git fetch` only downloads the changes form
 Q8)clone Vs fork    <br>
 ANS: `git clone` generally used for clone the complete repo into my local, whereas `git fork` used to copy someons's repository into our proile. 
 
-Q9) After forking, how do you keep your fork in sync with the original repo?
+Q9) After forking, how do you keep your fork in sync with the original repo?  <br>
 ANS: The changes that are present on the upstream or remote repository to move their to own repository, there is a option available sync fork.
