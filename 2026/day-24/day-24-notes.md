@@ -24,10 +24,40 @@ When you rebase, Git abandons the original commits and creates new ones with dif
 Q8) When would you use rebase vs merge?
 ANS: merge should be used when we have to add the changes into the main branch because it immediatly integrate the changes. whereas rebase used in that case where we have to maintain a clean, linear project history on private, local feature branches by moving your changes to the tip of the main branch, avoiding unnecessary merge commits.
 
+Q9) What does squash merging do?
+ANS: squash commit merge the multiple commits into one singe commit.
 
+Q10) When would you use squash merge vs regular merge?
+ANS: Squash merge combines all feature branch commits into one, creating a clean, single-commit history on the main branch, ideal for small, self-contained features. A regular merge preserves the entire history, including every granular commit, which is better for tracking long-running, complex branches.
 
+Q11) What is the trade-off of squashing?
+ANS: Squashing means combining multiple commits into a single commit before merging. It helps keep the commit history clean — but it comes with some trade-offs:
 
+Advantages
+Clean & readable history – fewer commits, easier to understand.
+Simplifies code review – reviewers see one meaningful commit instead of many small ones.
+Removes noisy commits – like fix typo, oops, WIP, etc.
 
+Trade-offs / Disadvantages
+Loss of detailed history – individual commit messages and step-by-step progress are lost.
+Harder debugging – tools like git bisect become less effective because intermediate commits are gone.
+Less traceability – you can’t easily see who changed what and why at each small step.
+Collaboration issues (if done late) – squashing shared branches can rewrite history and cause conflicts.
+
+Q12) What is the difference between git stash pop and git stash apply?
+ANS: git stash is used to temporarily save our umcommited changes and clean working directory without commited them. and after some time when we want to work on we can pop them and then commit them. and if we apply directly changes they remains in the stash list and the unwamtly filles out thier. 
+
+Q13) When would you use stash in a real-world workflow?
+ANS : git stash is used to temporarily save uncommitted changes (both staged and unstaged) to return the working directory to a clean state.
+
+Q14) What does cherry-pick do?
+ANS: cherry-pich command used for picking a specific command to commit in another branch, without merging the entire commits of branch.
+
+Q15) When would you use cherry-pick in a real project?
+ANS: suppode we have a feature branch and in this 3 new feature are added. and their 2nd feature is the best and want to add this perticular feature into the main branch in that case we use chaerry-pick to commit that one special commit rahter than merge entire commit history.
+
+Q16) What can go wrong with cherry-picking?
+ANS: Cherry-picking can cause conflicts, duplicate commits, broken dependencies, and confusing history if not used carefully.
 
 
 
