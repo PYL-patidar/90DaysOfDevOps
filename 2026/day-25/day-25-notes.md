@@ -38,13 +38,22 @@ Use reset if you committed something wrong locally and want to fix it before pus
 ## Task 3
 Create a comparison in your notes:
 ---
-                                       git reset	                            git revert
-What it does |                     reset the changes and preseved |         used for undo the commit histry not  
-                                   into staging(index)            |         and add alter commit not add actual change   
-Removes commit from history? |      yes                           |         not remove even add new commit
-Safe for shared/pushed branches? |  not safe not shared braches   |         safe with shared/pushed branches
-When to use	|                       if someting reset in local    |         when undo some changes on shared  
-                                   that are not pushed on public  |         repository  
+                                 |         git reset	                  |             git revert
+What it does                     |   reset the changes and preseved    |       used for undo the commit histry not  
+                                 |   into staging(index)               |       and add alter commit not add actual change   
+Removes commit from history?     |   yes                               |       not remove even add new commit
+Safe for shared/pushed branches? |   not safe not shared braches       |       safe with shared/pushed branches
+When to use	                     |   if someting reset in local        |       when undo some changes on shared  
+                                 |   that are not pushed on public     |       repository  
 ---
+
+## Task 4
+Branching strategies
+
+Git branching strategies are sets of rules and guidelines for how teams create, manage, and merge branches to ensure smooth collaboration and organized code development. The most common strategies are GitFlow, GitHub Flow, GitLab Flow, and Trunk-Based Development, each suited to different project needs and team sizes.
+
+
+
+
 
 ```
