@@ -54,7 +54,7 @@ Q14) What does cherry-pick do?
 ANS: cherry-pich command used for picking a specific command to commit in another branch, without merging the entire commits of branch.
 
 Q15) When would you use cherry-pick in a real project?
-ANS: suppode we have a feature branch and in this 3 new feature are added. and their 2nd feature is the best and want to add this perticular feature into the main branch in that case we use chaerry-pick to commit that one special commit rahter than merge entire commit history.
+ANS: suppose we have a feature branch and in this 3 new feature are added. and their 2nd feature is the best and want to add this perticular feature into the main branch in that case we use chaerry-pick to commit that one special commit rahter than merge entire commit history.
 
 Q16) What can go wrong with cherry-picking?
 ANS: Cherry-picking can cause conflicts, duplicate commits, broken dependencies, and confusing history if not used carefully.
