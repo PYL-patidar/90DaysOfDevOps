@@ -1,53 +1,79 @@
 ```
 # Git Setup & Configure
 
-- varifing git are already installed or not.
+# Varify git is installed.
 Command : git --version
 
-- Install git (on Linux)
-Command : sudo apt install git
+# Update and Install git (Linux)
+Command : sudo apt-get update -y
+Command : sudo apt install git -y
 
-- Configure 
-Command : git config --global user.name <user-name>
-Command : git config --global user.email <email>
+# Configure git  
+Command : git config --global user.name "<user-name>"
+Command : git config --global user.email "<email>"
 
-- varify
-Command : git config --list
-
-## Initialize a git repository
-
+# Initialize a git repository  
 Command: git init
 
-## Check git status
-
+# Check repository status
 Command: git status
 
-## Tracking a file
-
+# Track file and commit
 Command : git add <file_name>
-Command : git commit -m "add commit message"
+Command : git commit -m  "commit message"
 
-## See complete commit history (HEAD)
-Command : git log
+# View commit history (HEAD)
+Command : git log --oneline
 
-## Branching
-- See current branch
+# Branching
+# See current branch
 Command : git branch
 
-- Create a new branch
+# Create a new branchile
 Command : git branch <branch_name>
 
-- Switch and create new brach along with eisting woting tree files and commits 
+- Switch and Create new branch with existing working tree fs 
 Command : git checkout -b <branch_name>
 
 - Switch one to another branch
 Command : git switch <brach_name>
 
-- To delete branch
+- Delete a branch
 Command : git branch -D <branch_name>
 
+# Merge
+# fast-forward merge (no conflict, linear history)
+# Merge the specified branch into the current branch. 
+Command : git merge <branch>
 
+# Merge commit (when branches have diverged)
+Command: git merge --no-ff <branch>
 
+# Squash merge (combine all commits into one)
+Command: git merge --squash <branch>
 
+# Rebase
+# Move current branch commits on top of another branch
+Command: git rebase <branch>
 
+# Continue the rebase after resolving conflicts.
+Command: git rebase --continue
+
+# Cherry-pick
+# Apply a specific commit from another branch onto your current branch.
+Command: git cherry-pick <commit_id>
+
+# Reset
+# Undo commit but keep changes staged
+Command: git reset --soft <commit>
+
+# Undo commit and unstage changes (default mode)
+Command: git reset --mixed <commit>
+
+# Undo commit and discard all changes
+Command: git reset --hard <commit>
+
+# Revert
+# Create a new commit that undoes a specified commit
+Command: git revert <commit>
 ```
