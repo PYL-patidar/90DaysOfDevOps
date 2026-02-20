@@ -29,10 +29,10 @@ Command : git log --oneline
 # See current branch
 Command : git branch
 
-# Create a new branchile
+# Create a new branch
 Command : git branch <branch_name>
 
-- Switch and Create new branch with existing working tree fs 
+- Switch and Create new branch with existing working tree 
 Command : git checkout -b <branch_name>
 
 - Switch one to another branch
@@ -41,9 +41,8 @@ Command : git switch <brach_name>
 - Delete a branch
 Command : git branch -D <branch_name>
 
-# Merge
-# fast-forward merge (no conflict, linear history)
-# Merge the specified branch into the current branch. 
+# Merge 
+# Merge the specified branch into the current branch.(fast-forward merge) 
 Command : git merge <branch>
 
 # Merge commit (when branches have diverged)
