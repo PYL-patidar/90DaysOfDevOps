@@ -1,0 +1,337 @@
+root        1324  0.0  0.8  12032  8024 ?        Ss   08:32   0:00 sshd: /usr/sbin/sshd -D -o AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized_keys %u %f -o AuthorizedKeysCommandUser ec2-instance-connect [listener] 0 of 10-100 startups
+root        1901  0.0  1.1  14748 10436 ?        Ss   08:41   0:00 sshd: ubuntu [priv]
+ubuntu      1972  0.0  0.7  15004  7112 ?        S    08:41   0:00 sshd: ubuntu@pts/0
+root        2130  0.0  1.1  14744 10444 ?        Ss   09:09   0:00 sshd: ubuntu [priv]
+ubuntu      2186  0.0  0.7  15000  7172 ?        S    09:09   0:00 sshd: ubuntu@pts/1
+root        2461  0.0  1.1  14752 10524 ?        Ss   09:23   0:00 sshd: ubuntu [priv]
+ubuntu      2517  0.2  0.7  15296  7432 ?        S    09:23   0:02 sshd: ubuntu@pts/3
+ubuntu      2876  0.0  0.2   7084  2228 pts/3    S+   09:42   0:00 grep --color=auto ssh
+ubuntu      2877  0.0  0.2   6128  1916 pts/3    S+   09:42   0:00 tee ssh-file.txt
+[?1h=[?25l[H[2J(B[mtop - 09:43:35 up  1:12,  3 users,  load average: 0.03, 0.02, 0.00(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 121 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m 120 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  0.0 (B[m[39;49mus,(B[m[39;49m[1m  4.5 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 95.5 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m    911.5 (B[m[39;49mtotal,(B[m[39;49m[1m     62.9 (B[m[39;49mfree,(B[m[39;49m[1m    415.9 (B[m[39;49mused,(B[m[39;49m[1m    594.1 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m      0.0 (B[m[39;49mtotal,(B[m[39;49m[1m      0.0 (B[m[39;49mfree,(B[m[39;49m[1m      0.0 (B[m[39;49mused.(B[m[39;49m[1m    495.6 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+[7m    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  (B[m[39;49m[K
+(B[m      1 root      20   0   22244  13576   9612 S   0.0   1.5   0:01.99 systemd  (B[m[39;49m[K
+(B[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd (B[m[39;49m[K
+(B[m      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_wo+ (B[m[39;49m[K
+(B[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+ (B[m[39;49m[K
+(B[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+ (B[m[39;49m[K
+(B[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+ (B[m[39;49m[K
+(B[m      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+ (B[m[39;49m[K
+(B[m      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+ (B[m[39;49m[K
+(B[m      9 root      20   0       0      0      0 I   0.0   0.0   0:00.58 kworker+ (B[m[39;49m[K
+(B[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+ (B[m[39;49m[K
+(B[m     12 root      20   0       0      0      0 I   0.0   0.0   0:00.37 kworker+ (B[m[39;49m[K
+(B[m     13 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+ (B[m[39;49m[K
+(B[m     14 root      20   0       0      0      0 S   0.0   0.0   0:00.04 ksoftir+ (B[m[39;49m[K
+(B[m     15 root      20   0       0      0      0 I   0.0   0.0   0:00.27 rcu_sch+ (B[m[39;49m[K
+(B[m     16 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_exp+ (B[m[39;49m[K
+(B[m     17 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_exp+ (B[m[39;49m[K
+(B[m     18 root      rt   0       0      0      0 S   0.0   0.0   0:00.02 migrati+ (B[m[39;49m[K[?25l[H(B[mtop - 09:43:37 up  1:12,  3 users,  load average: 0.03, 0.02, 0.00(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m[1m 121 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m 120 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  0.0 (B[m[39;49mus,(B[m[39;49m[1m  0.0 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m100.0 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m    911.5 (B[m[39;49mtotal,(B[m[39;49m[1m     62.9 (B[m[39;49mfree,(B[m[39;49m[1m    415.9 (B[m[39;49mused,(B[m[39;49m[1m    594.1 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m      0.0 (B[m[39;49mtotal,(B[m[39;49m[1m      0.0 (B[m[39;49mfree,(B[m[39;49m[1m      0.0 (B[m[39;49mused.(B[m[39;49m[1m    495.6 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+[7m    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  (B[m[39;49m[K
+(B[m      1 root      20   0   22244  13576   9612 S   0.0   1.5   0:01.99 /sbin/i+ (B[m[39;49m[K
+(B[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [kthrea+ (B[m[39;49m[K
+(B[m      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [pool_w+ (B[m[39;49m[K
+(B[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      9 root      20   0       0      0      0 I   0.0   0.0   0:00.58 [kworke+ (B[m[39;49m[K
+(B[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m     12 root      20   0       0      0      0 I   0.0   0.0   0:00.37 [kworke+ (B[m[39;49m[K
+(B[m     13 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m     14 root      20   0       0      0      0 S   0.0   0.0   0:00.04 [ksofti+ (B[m[39;49m[K
+(B[m     15 root      20   0       0      0      0 I   0.0   0.0   0:00.27 [rcu_sc+ (B[m[39;49m[K
+(B[m     16 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [rcu_ex+ (B[m[39;49m[K
+(B[m     17 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [rcu_ex+ (B[m[39;49m[K
+(B[m     18 root      rt   0       0      0      0 S   0.0   0.0   0:00.02 [migrat+ (B[m[39;49m[K[?25l[HTasks:(B[m[39;49m[1m 121 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m 120 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  0.0 (B[m[39;49mus,(B[m[39;49m[1m  0.0 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m100.0 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m    911.5 (B[m[39;49mtotal,(B[m[39;49m[1m     62.9 (B[m[39;49mfree,(B[m[39;49m[1m    415.9 (B[m[39;49mused,(B[m[39;49m[1m    594.1 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m      0.0 (B[m[39;49mtotal,(B[m[39;49m[1m      0.0 (B[m[39;49mfree,(B[m[39;49m[1m      0.0 (B[m[39;49mused.(B[m[39;49m[1m    495.6 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+[7m    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  (B[m[39;49m[K
+(B[m[1m   2893 ubuntu    20   0   12376   5884   3688 R   7.1   0.6   0:00.01 top      (B[m[39;49m[K
+(B[m      1 root      20   0   22244  13576   9612 S   0.0   1.5   0:01.99 /sbin/i+ (B[m[39;49m[K
+(B[m      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [kthrea+ (B[m[39;49m[K
+(B[m      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [pool_w+ (B[m[39;49m[K
+(B[m      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      9 root      20   0       0      0      0 I   0.0   0.0   0:00.58 [kworke+ (B[m[39;49m[K
+(B[m     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m     12 root      20   0       0      0      0 I   0.0   0.0   0:00.37 [kworke+ (B[m[39;49m[K
+(B[m     13 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m     14 root      20   0       0      0      0 S   0.0   0.0   0:00.04 [ksofti+ (B[m[39;49m[K
+(B[m     15 root      20   0       0      0      0 I   0.0   0.0   0:00.27 [rcu_sc+ (B[m[39;49m[K
+(B[m     16 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [rcu_ex+ (B[m[39;49m[K
+(B[m     17 root      20   0       0      0      0 S   0.0   0.0   0:00.00 [rcu_ex+ (B[m[39;49m[K
+(B[m     18 root      rt   0       0      0      0 S   0.0   0.0   0:00.02 [migrat+ (B[m[39;49m[K[?25l[HTasks:(B[m[39;49m[1m 121 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m 120 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  4.8 (B[m[39;49mus,(B[m[39;49m[1m  0.0 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 95.2 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m    911.5 (B[m[39;49mtotal,(B[m[39;49m[1m     62.9 (B[m[39;49mfree,(B[m[39;49m[1m    415.9 (B[m[39;49mused,(B[m[39;49m[1m    594.1 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m      0.0 (B[m[39;49mtotal,(B[m[39;49m[1m      0.0 (B[m[39;49mfree,(B[m[39;49m[1m      0.0 (B[m[39;49mused.(B[m[39;49m[1m    495.6 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+[7m    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  (B[m[39;49m[K
+(B[m      1 root      20   0   21.7m  13.3m   9.4m S   0.0   1.5   0:01.99 /sbin/i+ (B[m[39;49m[K
+(B[m      2 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [kthrea+ (B[m[39;49m[K
+(B[m      3 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [pool_w+ (B[m[39;49m[K
+(B[m      4 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      5 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      6 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      7 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      8 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      9 root      20   0    0.0m   0.0m   0.0m I   0.0   0.0   0:00.58 [kworke+ (B[m[39;49m[K
+(B[m     10 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m     12 root      20   0    0.0m   0.0m   0.0m I   0.0   0.0   0:00.37 [kworke+ (B[m[39;49m[K
+(B[m     13 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m     14 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.04 [ksofti+ (B[m[39;49m[K
+(B[m     15 root      20   0    0.0m   0.0m   0.0m I   0.0   0.0   0:00.27 [rcu_sc+ (B[m[39;49m[K
+(B[m     16 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [rcu_ex+ (B[m[39;49m[K
+(B[m     17 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [rcu_ex+ (B[m[39;49m[K
+(B[m     18 root      rt   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.02 [migrat+ (B[m[39;49m[K
+(B[m     19 root     -51   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [idle_i+ (B[m[39;49m[K[5;1H[7m Command disabled, 'A' mode required [?25l(B[m[39;49m[K[?25l[HTasks:(B[m[39;49m[1m 121 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m 120 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  0.0 (B[m[39;49mus,(B[m[39;49m[1m  0.4 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 99.6 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m    911.5 (B[m[39;49mtotal,(B[m[39;49m[1m     62.9 (B[m[39;49mfree,(B[m[39;49m[1m    415.9 (B[m[39;49mused,(B[m[39;49m[1m    594.1 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m      0.0 (B[m[39;49mtotal,(B[m[39;49m[1m      0.0 (B[m[39;49mfree,(B[m[39;49m[1m      0.0 (B[m[39;49mused.(B[m[39;49m[1m    495.6 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+[7m    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  (B[m[39;49m[K
+(B[m      1 root      20   0   21.7m  13.3m   9.4m S   0.0   1.5   0:01.99 /sbin/i+ (B[m[39;49m[K
+(B[m      2 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [kthrea+ (B[m[39;49m[K
+(B[m      3 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [pool_w+ (B[m[39;49m[K
+(B[m      4 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      5 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      6 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      7 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      8 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      9 root      20   0    0.0m   0.0m   0.0m I   0.0   0.0   0:00.58 [kworke+ (B[m[39;49m[K
+(B[m     10 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m     12 root      20   0    0.0m   0.0m   0.0m I   0.0   0.0   0:00.37 [kworke+ (B[m[39;49m[K
+(B[m     13 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m     14 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.04 [ksofti+ (B[m[39;49m[K
+(B[m     15 root      20   0    0.0m   0.0m   0.0m I   0.0   0.0   0:00.27 [rcu_sc+ (B[m[39;49m[K
+(B[m     16 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [rcu_ex+ (B[m[39;49m[K
+(B[m     17 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [rcu_ex+ (B[m[39;49m[K
+(B[m     18 root      rt   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.02 [migrat+ (B[m[39;49m[K
+(B[m     19 root     -51   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [idle_i+ (B[m[39;49m[K[5;1H[1mPID to renice [default pid = 1] [?12;25h(B[m[39;49m[K[?12l[?25h[5;33H[Kq[5;34H[5;33H[K[5;33H[5;33H[Kq[5;34H[5;1H[7m Unacceptable integer [?25l(B[m[39;49m[K[?25l[HTasks:(B[m[39;49m[1m 121 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m 120 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  0.1 (B[m[39;49mus,(B[m[39;49m[1m  0.0 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 99.9 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m    911.5 (B[m[39;49mtotal,(B[m[39;49m[1m     62.9 (B[m[39;49mfree,(B[m[39;49m[1m    415.9 (B[m[39;49mused,(B[m[39;49m[1m    594.1 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m      0.0 (B[m[39;49mtotal,(B[m[39;49m[1m      0.0 (B[m[39;49mfree,(B[m[39;49m[1m      0.0 (B[m[39;49mused.(B[m[39;49m[1m    495.6 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+[7m    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  (B[m[39;49m[K
+(B[m   2517 ubuntu    20   0   14.9m   7.3m   5.1m S   0.4   0.8   0:03.12 sshd: u+ (B[m[39;49m[K
+(B[m    542 polkitd   20   0  374.7m   9.7m   7.3m S   0.2   1.1   0:00.22 /usr/li+ (B[m[39;49m[K
+(B[m    589 root      20   0 1760.0m  38.7m  25.1m S   0.2   4.2   0:02.51 /usr/bi+ (B[m[39;49m[K
+(B[m    761 root      20   0 1853.9m  55.6m  36.2m S   0.2   6.1   0:00.72 /usr/bi+ (B[m[39;49m[K
+(B[m      1 root      20   0   21.7m  13.3m   9.4m S   0.0   1.5   0:01.99 /sbin/i+ (B[m[39;49m[K
+(B[m      2 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [kthrea+ (B[m[39;49m[K
+(B[m      3 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [pool_w+ (B[m[39;49m[K
+(B[m      4 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      5 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      6 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      7 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      8 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      9 root      20   0    0.0m   0.0m   0.0m I   0.0   0.0   0:00.58 [kworke+ (B[m[39;49m[K
+(B[m     10 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m     12 root      20   0    0.0m   0.0m   0.0m I   0.0   0.0   0:00.37 [kworke+ (B[m[39;49m[K
+(B[m     13 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m     14 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.04 [ksofti+ (B[m[39;49m[K
+(B[m     15 root      20   0    0.0m   0.0m   0.0m I   0.0   0.0   0:00.27 [rcu_sc+ (B[m[39;49m[K[?25l[HTasks:(B[m[39;49m[1m 121 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m 120 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  0.0 (B[m[39;49mus,(B[m[39;49m[1m100.0 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m  0.0 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m    911.5 (B[m[39;49mtotal,(B[m[39;49m[1m     62.9 (B[m[39;49mfree,(B[m[39;49m[1m    415.9 (B[m[39;49mused,(B[m[39;49m[1m    594.1 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m      0.0 (B[m[39;49mtotal,(B[m[39;49m[1m      0.0 (B[m[39;49mfree,(B[m[39;49m[1m      0.0 (B[m[39;49mused.(B[m[39;49m[1m    495.6 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+[7m    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  (B[m[39;49m[K
+(B[m[1m   2893 ubuntu    20   0   12.1m   5.8m   3.6m R 100.0   0.6   0:00.02 top      (B[m[39;49m[K
+(B[m      1 root      20   0   21.7m  13.3m   9.4m S   0.0   1.5   0:01.99 /sbin/i+ (B[m[39;49m[K
+(B[m      2 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [kthrea+ (B[m[39;49m[K
+(B[m      3 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [pool_w+ (B[m[39;49m[K
+(B[m      4 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      5 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      6 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      7 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      8 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      9 root      20   0    0.0m   0.0m   0.0m I   0.0   0.0   0:00.58 [kworke+ (B[m[39;49m[K
+(B[m     10 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m     12 root      20   0    0.0m   0.0m   0.0m I   0.0   0.0   0:00.37 [kworke+ (B[m[39;49m[K
+(B[m     13 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m     14 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.04 [ksofti+ (B[m[39;49m[K
+(B[m     15 root      20   0    0.0m   0.0m   0.0m I   0.0   0.0   0:00.27 [rcu_sc+ (B[m[39;49m[K
+(B[m     16 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [rcu_ex+ (B[m[39;49m[K
+(B[m     17 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [rcu_ex+ (B[m[39;49m[K
+(B[m     18 root      rt   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.02 [migrat+ (B[m[39;49m[K[?25l[HTasks:(B[m[39;49m[1m 121 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m 120 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  0.0 (B[m[39;49mus,(B[m[39;49m[1m  0.0 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m100.0 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m    911.5 (B[m[39;49mtotal,(B[m[39;49m[1m     62.9 (B[m[39;49mfree,(B[m[39;49m[1m    415.9 (B[m[39;49mused,(B[m[39;49m[1m    594.1 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m      0.0 (B[m[39;49mtotal,(B[m[39;49m[1m      0.0 (B[m[39;49mfree,(B[m[39;49m[1m      0.0 (B[m[39;49mused.(B[m[39;49m[1m    495.6 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+[7m    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  (B[m[39;49m[K
+(B[m      1 root      20   0   21.7m  13.3m   9.4m S   0.0   1.5   0:01.99 /sbin/i+ (B[m[39;49m[K
+(B[m      2 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [kthrea+ (B[m[39;49m[K
+(B[m      3 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [pool_w+ (B[m[39;49m[K
+(B[m      4 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      5 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      6 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      7 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      8 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      9 root      20   0    0.0m   0.0m   0.0m I   0.0   0.0   0:00.58 [kworke+ (B[m[39;49m[K
+(B[m     10 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m     12 root      20   0    0.0m   0.0m   0.0m I   0.0   0.0   0:00.37 [kworke+ (B[m[39;49m[K
+(B[m     13 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m     14 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.04 [ksofti+ (B[m[39;49m[K
+(B[m     15 root      20   0    0.0m   0.0m   0.0m I   0.0   0.0   0:00.27 [rcu_sc+ (B[m[39;49m[K
+(B[m     16 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [rcu_ex+ (B[m[39;49m[K
+(B[m     17 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [rcu_ex+ (B[m[39;49m[K
+(B[m     18 root      rt   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.02 [migrat+ (B[m[39;49m[K
+(B[m     19 root     -51   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [idle_i+ (B[m[39;49m[K[?25l[HTasks:(B[m[39;49m[1m 121 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m 120 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  0.0 (B[m[39;49mus,(B[m[39;49m[1m  0.0 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m100.0 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m    911.5 (B[m[39;49mtotal,(B[m[39;49m[1m     62.9 (B[m[39;49mfree,(B[m[39;49m[1m    415.9 (B[m[39;49mused,(B[m[39;49m[1m    594.1 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m      0.0 (B[m[39;49mtotal,(B[m[39;49m[1m      0.0 (B[m[39;49mfree,(B[m[39;49m[1m      0.0 (B[m[39;49mused.(B[m[39;49m[1m    495.6 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+[7m    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  (B[m[39;49m[K
+(B[m   2517 ubuntu    20   0   14.9m   7.3m   5.1m S   5.6   0.8   0:03.13 sshd: u+ (B[m[39;49m[K
+(B[m      1 root      20   0   21.7m  13.3m   9.4m S   0.0   1.5   0:01.99 /sbin/i+ (B[m[39;49m[K
+(B[m      2 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [kthrea+ (B[m[39;49m[K
+(B[m      3 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [pool_w+ (B[m[39;49m[K
+(B[m      4 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      5 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      6 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      7 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      8 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      9 root      20   0    0.0m   0.0m   0.0m I   0.0   0.0   0:00.58 [kworke+ (B[m[39;49m[K
+(B[m     10 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m     12 root      20   0    0.0m   0.0m   0.0m I   0.0   0.0   0:00.37 [kworke+ (B[m[39;49m[K
+(B[m     13 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m     14 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.04 [ksofti+ (B[m[39;49m[K
+(B[m     15 root      20   0    0.0m   0.0m   0.0m I   0.0   0.0   0:00.27 [rcu_sc+ (B[m[39;49m[K
+(B[m     16 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [rcu_ex+ (B[m[39;49m[K
+(B[m     17 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [rcu_ex+ (B[m[39;49m[K
+(B[m     18 root      rt   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.02 [migrat+ (B[m[39;49m[K[?25l[HTasks:(B[m[39;49m[1m 121 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m 120 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  0.0 (B[m[39;49mus,(B[m[39;49m[1m  3.0 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m 97.0 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m    911.5 (B[m[39;49mtotal,(B[m[39;49m[1m     62.9 (B[m[39;49mfree,(B[m[39;49m[1m    415.9 (B[m[39;49mused,(B[m[39;49m[1m    594.1 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m      0.0 (B[m[39;49mtotal,(B[m[39;49m[1m      0.0 (B[m[39;49mfree,(B[m[39;49m[1m      0.0 (B[m[39;49mused.(B[m[39;49m[1m    495.6 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+[7m    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  (B[m[39;49m[K
+(B[m[1m   2893 ubuntu    20   0   12.1m   5.8m   3.6m R  11.8   0.6   0:00.04 top      (B[m[39;49m[K
+(B[m      1 root      20   0   21.7m  13.3m   9.4m S   0.0   1.5   0:01.99 /sbin/i+ (B[m[39;49m[K
+(B[m      2 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [kthrea+ (B[m[39;49m[K
+(B[m      3 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [pool_w+ (B[m[39;49m[K
+(B[m      4 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      5 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      6 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      7 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      8 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      9 root      20   0    0.0m   0.0m   0.0m I   0.0   0.0   0:00.58 [kworke+ (B[m[39;49m[K
+(B[m     10 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m     12 root      20   0    0.0m   0.0m   0.0m I   0.0   0.0   0:00.37 [kworke+ (B[m[39;49m[K
+(B[m     13 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m     14 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.04 [ksofti+ (B[m[39;49m[K
+(B[m     15 root      20   0    0.0m   0.0m   0.0m I   0.0   0.0   0:00.27 [rcu_sc+ (B[m[39;49m[K
+(B[m     16 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [rcu_ex+ (B[m[39;49m[K
+(B[m     17 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [rcu_ex+ (B[m[39;49m[K
+(B[m     18 root      rt   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.02 [migrat+ (B[m[39;49m[K[?25l[HTasks:(B[m[39;49m[1m 121 (B[m[39;49mtotal,(B[m[39;49m[1m   1 (B[m[39;49mrunning,(B[m[39;49m[1m 120 (B[m[39;49msleeping,(B[m[39;49m[1m   0 (B[m[39;49mstopped,(B[m[39;49m[1m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m[1m  0.0 (B[m[39;49mus,(B[m[39;49m[1m  0.0 (B[m[39;49msy,(B[m[39;49m[1m  0.0 (B[m[39;49mni,(B[m[39;49m[1m100.0 (B[m[39;49mid,(B[m[39;49m[1m  0.0 (B[m[39;49mwa,(B[m[39;49m[1m  0.0 (B[m[39;49mhi,(B[m[39;49m[1m  0.0 (B[m[39;49msi,(B[m[39;49m[1m  0.0 (B[m[39;49mst(B[m[39;49m(B[m (B[m[39;49m(B[m[39;49m[K
+MiB Mem :(B[m[39;49m[1m    911.5 (B[m[39;49mtotal,(B[m[39;49m[1m     62.9 (B[m[39;49mfree,(B[m[39;49m[1m    415.9 (B[m[39;49mused,(B[m[39;49m[1m    594.1 (B[m[39;49mbuff/cache(B[m[39;49m(B[m (B[m[39;49m(B[m    (B[m[39;49m(B[m[39;49m[K
+MiB Swap:(B[m[39;49m[1m      0.0 (B[m[39;49mtotal,(B[m[39;49m[1m      0.0 (B[m[39;49mfree,(B[m[39;49m[1m      0.0 (B[m[39;49mused.(B[m[39;49m[1m    495.6 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+[7m    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  (B[m[39;49m[K
+(B[m      1 root      20   0   21.7m  13.3m   9.4m S   0.0   1.5   0:01.99 /sbin/i+ (B[m[39;49m[K
+(B[m      2 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [kthrea+ (B[m[39;49m[K
+(B[m      3 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [pool_w+ (B[m[39;49m[K
+(B[m      4 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      5 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      6 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      7 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      8 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m      9 root      20   0    0.0m   0.0m   0.0m I   0.0   0.0   0:00.58 [kworke+ (B[m[39;49m[K
+(B[m     10 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m     12 root      20   0    0.0m   0.0m   0.0m I   0.0   0.0   0:00.37 [kworke+ (B[m[39;49m[K
+(B[m     13 root       0 -20    0.0m   0.0m   0.0m I   0.0   0.0   0:00.00 [kworke+ (B[m[39;49m[K
+(B[m     14 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.04 [ksofti+ (B[m[39;49m[K
+(B[m     15 root      20   0    0.0m   0.0m   0.0m I   0.0   0.0   0:00.27 [rcu_sc+ (B[m[39;49m[K
+(B[m     16 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [rcu_ex+ (B[m[39;49m[K
+(B[m     17 root      20   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [rcu_ex+ (B[m[39;49m[K
+(B[m     18 root      rt   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.02 [migrat+ (B[m[39;49m[K
+(B[m     19 root     -51   0    0.0m   0.0m   0.0m S   0.0   0.0   0:00.00 [idle_i+ (B[m[39;49m[K[?1l>[25;1H
+[?12l[?25h[K● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/usr/lib/systemd/system/ssh.service; disabled; preset: enabled)
+    Drop-In: /usr/lib/systemd/system/ssh.service.d
+             └─ec2-instance-connect.conf
+     Active: active (running) since Mon 2026-02-23 08:32:15 UTC; 1h 11min ago
+TriggeredBy: ● ssh.socket
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+    Process: 1323 ExecStartPre=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
+   Main PID: 1324 (sshd)
+      Tasks: 1 (limit: 1015)
+     Memory: 8.7M (peak: 12.8M)
+        CPU: 341ms
+     CGroup: /system.slice/ssh.service
+             └─1324 "sshd: /usr/sbin/sshd -D -o AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized_keys %u %f -o AuthorizedKeysCommandUser ec2-instance-connect [listener] 0 of 10-100 startups"
+
+Feb 23 09:23:27 ip-172-31-46-110 sshd[2461]: Accepted publickey for ubuntu from 1.187.171.166 port 6591 ssh2: RSA SHA256:MN4J2uBmxKV1WYqOG/mgvOkC3mUZV7467bAGZnmzwh4
+Feb 23 09:23:27 ip-172-31-46-110 sshd[2461]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+Feb 23 09:29:06 ip-172-31-46-110 sshd[2681]: Connection closed by 170.64.189.122 port 41892
+Feb 23 09:29:59 ip-172-31-46-110 sshd[2737]: Connection closed by 45.61.184.133 port 31408 [preauth]
+Feb 23 09:30:09 ip-172-31-46-110 sshd[2739]: Connection closed by authenticating user root 170.64.189.122 port 41310 [preauth]
+Feb 23 09:30:53 ip-172-31-46-110 sshd[2744]: Connection closed by authenticating user root 170.64.189.122 port 47976 [preauth]
+Feb 23 09:31:38 ip-172-31-46-110 sshd[2756]: Connection closed by authenticating user root 170.64.189.122 port 37330 [preauth]
+Feb 23 09:32:21 ip-172-31-46-110 sshd[2759]: Connection closed by authenticating user root 170.64.189.122 port 41800 [preauth]
+Feb 23 09:33:04 ip-172-31-46-110 sshd[2761]: Connection closed by authenticating user root 170.64.189.122 port 59888 [preauth]
+Feb 23 09:33:46 ip-172-31-46-110 sshd[2763]: Connection closed by authenticating user root 170.64.189.122 port 37106 [preauth]
+# /usr/lib/systemd/system/ssh.service
+[Unit]
+Description=OpenBSD Secure Shell server
+Documentation=man:sshd(8) man:sshd_config(5)
+After=network.target auditd.service
+ConditionPathExists=!/etc/ssh/sshd_not_to_be_run
+
+[Service]
+EnvironmentFile=-/etc/default/ssh
+ExecStartPre=/usr/sbin/sshd -t
+ExecStart=/usr/sbin/sshd -D $SSHD_OPTS
+ExecReload=/usr/sbin/sshd -t
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=on-failure
+RestartPreventExitStatus=255
+Type=notify
+RuntimeDirectory=sshd
+RuntimeDirectoryMode=0755
+
+[Install]
+WantedBy=multi-user.target
+Alias=sshd.service
+
+# /usr/lib/systemd/system/ssh.service.d/ec2-instance-connect.conf
+[Service]
+ExecStart=
+ExecStart=/usr/sbin/sshd -D -o "AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized_keys %%u %%f" -o "AuthorizedKeysCommandUser ec2-instance-connect" $SSHD_OPTS
+Feb 23 08:32:19 ip-172-31-46-110 sshd[1326]: Accepted publickey for ubuntu from 1.187.171.159 port 35307 ssh2: RSA SHA256:MN4J2uBmxKV1WYqOG/mgvOkC3mUZV7467bAGZnmzwh4
+Feb 23 08:32:19 ip-172-31-46-110 sshd[1326]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+Feb 23 08:41:28 ip-172-31-46-110 sshd[1901]: Accepted publickey for ubuntu from 1.187.171.159 port 35293 ssh2: RSA SHA256:MN4J2uBmxKV1WYqOG/mgvOkC3mUZV7467bAGZnmzwh4
+Feb 23 08:41:28 ip-172-31-46-110 sshd[1901]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+Feb 23 08:54:04 ip-172-31-46-110 sshd[2117]: banner exchange: Connection from 74.235.185.122 port 58854: invalid format
+Feb 23 08:54:13 ip-172-31-46-110 sshd[2115]: Connection closed by 74.235.185.122 port 58844 [preauth]
+Feb 23 09:09:47 ip-172-31-46-110 sshd[2130]: Accepted publickey for ubuntu from 1.187.171.159 port 35290 ssh2: RSA SHA256:MN4J2uBmxKV1WYqOG/mgvOkC3mUZV7467bAGZnmzwh4
+Feb 23 09:09:47 ip-172-31-46-110 sshd[2130]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+Feb 23 09:18:27 ip-172-31-46-110 sshd[2244]: Accepted publickey for ubuntu from 1.187.171.159 port 35261 ssh2: RSA SHA256:MN4J2uBmxKV1WYqOG/mgvOkC3mUZV7467bAGZnmzwh4
+Feb 23 09:18:27 ip-172-31-46-110 sshd[2244]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+Feb 23 09:23:27 ip-172-31-46-110 sshd[2461]: Accepted publickey for ubuntu from 1.187.171.166 port 6591 ssh2: RSA SHA256:MN4J2uBmxKV1WYqOG/mgvOkC3mUZV7467bAGZnmzwh4
+Feb 23 09:23:27 ip-172-31-46-110 sshd[2461]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+Feb 23 09:29:06 ip-172-31-46-110 sshd[2681]: Connection closed by 170.64.189.122 port 41892
+Feb 23 09:29:59 ip-172-31-46-110 sshd[2737]: Connection closed by 45.61.184.133 port 31408 [preauth]
+Feb 23 09:30:09 ip-172-31-46-110 sshd[2739]: Connection closed by authenticating user root 170.64.189.122 port 41310 [preauth]
+Feb 23 09:30:53 ip-172-31-46-110 sshd[2744]: Connection closed by authenticating user root 170.64.189.122 port 47976 [preauth]
+Feb 23 09:31:38 ip-172-31-46-110 sshd[2756]: Connection closed by authenticating user root 170.64.189.122 port 37330 [preauth]
+Feb 23 09:32:21 ip-172-31-46-110 sshd[2759]: Connection closed by authenticating user root 170.64.189.122 port 41800 [preauth]
+Feb 23 09:33:04 ip-172-31-46-110 sshd[2761]: Connection closed by authenticating user root 170.64.189.122 port 59888 [preauth]
+Feb 23 09:33:46 ip-172-31-46-110 sshd[2763]: Connection closed by authenticating user root 170.64.189.122 port 37106 [preauth]
