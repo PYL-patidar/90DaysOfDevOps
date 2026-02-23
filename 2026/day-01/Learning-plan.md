@@ -1,6 +1,6 @@
 "Next 90 Days plan for DevOps Journey" <br>
 
-1) ye bat samajh lo ki kuch bhi cheez sikhna jitna importent hai utna hi usko public ko batana importent hai (Learn in pubic is importent) <br>
+1) Understand this: learning something is important, but sharing it publicly is just as important. Learning in public matters.
 2) Active on Community server. (Discord) <br>
 3) complete their task on Github (Daily) <br>
 4) make 3 Post in a week (based on Suterday-Sunday classes topic) <br>
@@ -8,7 +8,7 @@
 <br>
 Current Level --> Fresher (with learner mindset)<br>
 3 clear Goals --> 1)Improve soft Skills, 2) Hands-on Project of DevOps level 3) Presentation skills<br>
-pure week ki learnig ke basis pr one video shot krna <br>
+pure week ki learnig ke basis pr one video shoot krna <br>
 <br>
 <br>
 Weekly plan (restricly follow) <br>
