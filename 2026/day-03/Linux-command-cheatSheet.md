@@ -8,20 +8,22 @@ Process Managment commands
 Networking commands <br>
 
  6) ip --> give ip address for a perticular device
- 7) ping--> send data packets in network check routing properly or not
- 8) curl--> search a url for the internet
- 9) dig --> perform DNS lookups and display report of the DNS servers
- 
+ 7) ping--> Test the network connectivity to send ICMP data packets
+ 8) ifconfig --> Display the status of the currently active interfaces
+ 9) curl--> transfer data to server using url
+ 10) dig --> perform DNS lookups and display report of the DNS servers
+ 11) nslookup <domain> → Query DNS server
+     
  File system commands<br>
  
- 10) mkdir --> make a directory
- 11) touch --> create a file
- 12) cat --> show data of a file
- 13) nohup --> runs in background of the system
- 14) rm --> delete a file or a empty directory
- 15) mv --> move form source to destination or also rename
- 16) cp --> copy file 
- 17) chmod --> modify the permission of a file or directory
- 18) chown --> change the ownership of file or folder
- 19) grep --> used to apply filter
- 20) head/tail --> top 10 line or bottom 10 line print
+ 12) mkdir --> make a directory
+ 13) touch --> create a file
+ 14) cat --> show data of a file
+ 15) nohup --> runs in background of the system
+ 16) rm --> delete a file or a empty directory
+ 17) mv --> move form source to destination or also rename
+ 18) cp --> copy file 
+ 19) chmod --> modify the permission of a file or directory
+ 20) chown --> change the ownership of file or folder
+ 21) grep --> used to apply filter
+ 22) head/tail --> top 10 line or bottom 10 line print
