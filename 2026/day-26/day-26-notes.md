@@ -1,38 +1,90 @@
 # Task 1: Install and Authenticate
 
-- Install the GitHub CLI on your machine
-  Command : sudo apt update
-            sudo apt install gh -y  
-- Authenticate with your GitHub account
+- Install the GitHub CLI on your machine <br>
+  Command : sudo apt update <br>
+            sudo apt install gh -y  <br> 
+- Authenticate with your GitHub account <br>
   Command : gh auth login 
 
-During the process - we have to select
-1) Github type (Github.com or Github Enterprise)
-2) preferred protocol for Git operations (HTTPS or SSH)
-3) Authentication Method (Web browser or Token)
+During the process - we have to select <br>
+1) Github type (Github.com or Github Enterprise)  <br>
+2) preferred protocol for Git operations (HTTPS or SSH) <br>
+3) Authentication Method (Web browser or Token) <br>
  
-- Verify which account is active
-  Command : gh --version
+- Verify which account is active <br>
+  Command : gh --version  <br>
 
-Q) What authentication methods does `gh` support?
-ANS : gh supoorts to authentication methods 
-   1. Via Web browser  2.  Via a personal Access Token 
+Q) What authentication methods does `gh` support?   <br>
+ANS : gh supoorts to authentication methods  <br>
+   1. Via Web browser  2.  Via a personal Access Token  <br>
 
 # Task 2 : Working with Repositories
 
-- Create a new GitHub repo directly from the terminal — make it public with a README
-Command : gh repo create
+- Create a new GitHub repo directly from the terminal — make it public with a README  <br>
+Command : gh repo create  <br>
+- During the process we have to select: <br>
+Create a new repository on GitHub from scratch <br>
+Repository name demo  <br>
+Description  <br>
+Visibility Public  <br>
+Would you like to add a README file? Yes  <br>
+Would you like to add a .gitignore? No   <br>
+Would you like to add a license? No  <br> 
 
-During the process we have to select:
-- Create a new repository on GitHub from scratch
-- Repository name demo
-- Description
-- Visibility Public
-- Would you like to add a README file? Yes
-- Would you like to add a .gitignore? No
-- Would you like to add a license? No
-- 
+- Clone a repo using gh instead of git clone
+  Commnad : gh repo clone <repo_name>
 
+- View details of one of your repos from the terminal
+- To view information about the current repository:
+  Command : gh repo view
+
+- List all your repositories
+  Command : gh repo list
+
+- Open a repo in your browser directly from the terminal
+  Command : gh repo view --web
+
+- Delete the test repo you created
+  Command : gh repo delete <repo_name>
+
+# Task 3  : Issues
+- Create an issue on one of your repos from the terminal — give it a title, body, and a label
+Command : gh issue create
+
+- List all open issues on that repo
+Command : gh issue list
+
+- View a specific issue by its number
+Command : gh issue view 1
+
+- Close an issue from the terminal
+Command : gh issue close 1
+
+Q)  How could you use gh issue in a script or automation?
+ANS : 
+
+# Task 4 : Pull Request
+
+- Create a branch, make a change, push it, and create a pull request entirely from the terminal
+Command : gh pr create
+
+- List all open PRs on a repo
+Command : gh pr list
+
+- View a specific pull request:
+Command : gh pr view 5  
+
+- View a pull request with its comments and status checks:
+Command : gh pr view 5 --comments  
+
+- Checkout a pull request locally for testing:
+Commnad : gh pr checkout 5
+
+- Merge your PR from the terminal
+Command : gh pr merge 5
+
+Q) What merge methods does gh pr merge support?
+Q) How would you review someone else's PR using gh?
 
   
 Q1) What authentication methods does gh support?
