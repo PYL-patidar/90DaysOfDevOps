@@ -1,16 +1,22 @@
-There are many ways to record the logs and output
-We use -->  > , >> or command | tee output.txt
+# Task 
 
-Process Commands:
-1. ps aux > output.txt
-2. top >> output.txt
-3. pgrep sshd | tee output.txt
+## To check running processes
+  Command : ps , top , htop
 
-Service Commands:
-1. systemctl status | tee -a output.txt
-2. systemctl list-unit-files | tee -a output.txt
-3. systemctl --failed >> output.txt
+## Inspect one systemd service(ssh)
+- Check service status
+  Command : systemctl status ssh
+  
+- Get the detailed information about the service
+  Command : systemclt show ssh
 
-Log Commands:
-1. journalctl -u ssh | tail -n 50 | tee -a output.txt
+- View service unit files
+  Command : systemctl cat ssh
+
+- Check logs for a service
+  Command : journalctl -u ssh
+
+
+## save logs in a file   
+1. journalctl -u ssh | tail -n 50 | tee -a ssh-log.txt
 
