@@ -65,6 +65,6 @@ Observation : Last 50 lines shows normal authentication attempts no errors or wa
 Command : tail -n 50 /var/log/<file>.log <br>
 Observation : Recent login attempts record. No suspicious activity detected. <br>
 <br>
-<h2>If this worsens</h2> <br>
+<h2>If this worse</h2> <br>
 Restart SSH service and monitor logs <br>
 
