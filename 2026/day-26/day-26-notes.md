@@ -1,9 +1,9 @@
 # Task 1: Install and Authenticate
 
 - Install the GitHub CLI on your machine <br>
-  Command : sudo apt update && sudo apt install gh -y  <br> 
+  Command : `sudo apt update ` && `sudo apt install gh -y ` <br> 
 - Authenticate with your GitHub account <br>
-  Command : gh auth login 
+  Command : `gh auth login`
 
 During the process - we have to select <br>
 1) Github type (Github.com or Github Enterprise)  <br>
@@ -11,7 +11,7 @@ During the process - we have to select <br>
 3) Authentication Method (Web browser or Token) <br>
  
 - Verify which account is active <br>
-  Command : gh --version  <br>
+  Command : `gh --version`  <br>
 
 Q) What authentication methods does `gh` support?   <br>
 ANS : gh supoorts to authentication methods  <br>
@@ -20,7 +20,8 @@ ANS : gh supoorts to authentication methods  <br>
 # Task 2 : Working with Repositories
 
 - Create a new GitHub repo directly from the terminal — make it public with a README  <br>
-Command : gh repo create  <br>
+Command : `gh repo create`  <br>
+
 During the process we have to select: <br>
 1) Create a new repository on GitHub from scratch <br>
 2) Repository name demo  <br>
@@ -30,21 +31,20 @@ During the process we have to select: <br>
 6) Would you like to add a .gitignore? No   <br>
 7) Would you like to add a license? No  <br> 
 
-- Clone a repo using gh instead of git clone
-  Commnad : gh repo clone <repo_name>
+- Clone a repo using `gh` instead of git clone
+  Commnad : `gh repo clone` <repo_name>
 
-- View details of one of your repos from the terminal
 - To view information about the current repository:
-  Command : gh repo view
+  Command : `gh repo view`
 
 - List all your repositories
-  Command : gh repo list
+  Command : `gh repo list`
 
 - Open a repo in your browser directly from the terminal
-  Command : gh repo view --web
+  Command : `gh repo view --web`
 
 - Delete the test repo you created
-  Command : gh repo delete <repo_name>
+  Command : `gh repo delete <repo_name>`
 
 # Task 3  : Issues
 - Create an issue on one of your repos from the terminal — give it a title, body, and a label
