@@ -18,23 +18,23 @@
 
 ## Commands used :
 - Create Users with home directory: <br>
-Commands : sudo useradd -m <user_name> <br>
+Commands : `sudo useradd -m <user_name> `<br>
 
 - Set password of user <br>
-Command : sudo passwd <user_name> <br>
+Command : `sudo passwd <user_name>`
 
 - Create Group: <br>
-Command : sudo groupadd <group_name>
+Command : `sudo groupadd <group_name>`
 
 - Add member to group <br>
-Command : sudo usermod -aG <group_name> <user_name> <br>
+Command : `sudo usermod -aG <group_name> <user_name>`<br>
 
 demo directory create for testing perpose (named dev-project) <br>
 - set group (change group) <br>
-Command : sudo chgrp <group_name> <dir_name>
+Command : `sudo chgrp <group_name> <dir_name>`
 
 - set permission
-Command : sudo chmod 775 <dir_name>
+Command : `sudo chmod 775 <dir_name>`
 
 Test user enable for read, write and execute operation
 
