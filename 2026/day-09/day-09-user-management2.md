@@ -1,4 +1,3 @@
- ```
 # Day 09 Challenge 
 
 ## Users & Groups Created
