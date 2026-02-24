@@ -3,7 +3,8 @@
 - Files and directories Created
 - Ownershop changes
 
-# Commands Used for Ownership Management 
+## Commands Used for Ownership Management 
+
 - Check file owner and group <br>
   Command : `ls -l`
 
@@ -11,10 +12,16 @@
   Command : `sudo chown <user> <file_name>`
   
 - Change ownership of a group <br>
- Co: sudo chown :group <file_name>
-- for both : sudo chown user:group <file_name>
-- change recursively ownership : sudo chown -R user:group <dir_name>
-- varify command : ls -lR <dir_name>
+  Command : `sudo chgrp <group> <file_name>`
+  
+- Change both user and group ownership <br>
+  Command : `sudo chown <user>:<group> <file_name>`
+  
+- Change ownership recursively (for directories) <br>
+  Commands : `sudo chown -R <user>:<group> <dir_name>`
+  
+- Verify recursive ownership changes <br>
+  Command : `ls -lR <dir_name>`
 
 
 ## I learned :
