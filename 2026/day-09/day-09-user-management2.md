@@ -19,7 +19,7 @@
 ## Commands used :
 - Create Users: <br>
 Commands : sudo useradd -m <user_name> <br>
-  add user with directory <br>
+- Add user with directory <br>
 Command : sudo passwd <user_name> <br>
   set password of user <br>
 
