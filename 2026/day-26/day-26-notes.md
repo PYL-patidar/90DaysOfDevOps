@@ -1,8 +1,7 @@
 # Task 1: Install and Authenticate
 
 - Install the GitHub CLI on your machine <br>
-  Command : sudo apt update <br>
-            sudo apt install gh -y  <br> 
+  Command : sudo apt update && sudo apt install gh -y  <br> 
 - Authenticate with your GitHub account <br>
   Command : gh auth login 
 
