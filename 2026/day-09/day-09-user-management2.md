@@ -16,7 +16,7 @@
 - `dev-project` --> with permission 775
 - `team-workspace` --> with permission 775
 
-## User & Group management Commands:
+## User & Group Management Commands:
 
 - Create a Users with home directory: <br>
 Command : `sudo useradd -m <user_name> `<br>
