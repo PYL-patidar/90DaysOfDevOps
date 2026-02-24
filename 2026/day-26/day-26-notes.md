@@ -13,9 +13,12 @@ During the process - we have to select <br>
 - Verify which account is active <br>
   Command : `gh --version`  <br>
 
-Q) What authentication methods does `gh` support?   <br>
-ANS : gh supoorts to authentication methods  <br>
-   1. Via Web browser  2.  Via a personal Access Token  <br>
+Q) What authentication methods does `gh` support? <br>
+ANS : gh (GitHub CLI) supports multiple secure authentication methods for GitHub <br> 
+- Web-based Login <br> 
+  `gh auth login`
+- Personal Access Token (PAT) <br> 
+  `gh auth login --with-token`
 
 # Task 2 : Working with Repositories
 
@@ -83,16 +86,14 @@ Commnad : `gh pr checkout 5`
 Command : `gh pr merge 5`
 
 Q) What merge methods does gh pr merge support? <br> 
+ANS : gh pr merge supports three merge methods:
+- Merge Commit
+`gh pr merge --merge`
+- Squash Merge
+`gh pr merge --squash`
+- Rebase Merge
+`gh pr merge --rebase`
+
 Q) How would you review someone else's PR using gh? <br> 
+We can view, checkout, and submit reviews for pull requests using `gh pr view`, `gh pr checkout`, and `gh pr review`.
 
-  
-Q1) What authentication methods does gh support? <br> 
-ANS: gh (GitHub CLI) supports multiple secure authentication methods for GitHub <br> 
-- Web-based Login <br> 
-  `gh auth login`
-- Personal Access Token (PAT) <br> 
-  `gh auth login --with-token`
-
-Q2) What merge methods does gh pr merge support? <br> 
-
-Q3) How would you review someone else's PR using gh? <br> 
