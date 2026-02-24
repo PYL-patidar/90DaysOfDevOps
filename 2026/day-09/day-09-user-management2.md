@@ -17,11 +17,11 @@
 - `team-workspace` --> with permission 775
 
 ## Commands used :
-- Create Users:
+- Create Users: <br>
 Commands : sudo useradd -m <user_name> <br>
-  add user with directory 
+  add user with directory <br>
 Command : sudo passwd <user_name> <br>
-  set password of user
+  set password of user <br>
 
 - Create Group: <br>
 Command : sudo groupadd <group_name>
