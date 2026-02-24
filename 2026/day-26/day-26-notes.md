@@ -21,14 +21,14 @@ ANS : gh supoorts to authentication methods  <br>
 
 - Create a new GitHub repo directly from the terminal — make it public with a README  <br>
 Command : gh repo create  <br>
-1) During the process we have to select: <br>
-2) Create a new repository on GitHub from scratch <br>
-3) Repository name demo  <br>
-4) Description  <br>
-5) Visibility Public  <br>
-6) Would you like to add a README file? Yes  <br>
-7) Would you like to add a .gitignore? No   <br>
-8) Would you like to add a license? No  <br> 
+During the process we have to select: <br>
+1) Create a new repository on GitHub from scratch <br>
+2) Repository name demo  <br>
+3) Description  <br>
+4) Visibility Public  <br>
+5) Would you like to add a README file? Yes  <br>
+6) Would you like to add a .gitignore? No   <br>
+7) Would you like to add a license? No  <br> 
 
 - Clone a repo using gh instead of git clone
   Commnad : gh repo clone <repo_name>
