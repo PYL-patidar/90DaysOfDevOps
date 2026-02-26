@@ -14,7 +14,7 @@ A, AAAA, CNAME, MX, NS<br>
 - MX Record – Specifies which mail servers handle incoming emails for a domain.<br>
 - NS Record – Specifies the authoritative DNS servers that manage the domain’s DNS records.<br>
 
-# Task 2
+## Task 2
 
 Q1) What is IPv4 an address? how is it structured?.<br>
 - IPv4 (Internet Protocol version 4) is a 32-bit numeric address used to uniquely identify devices on a network.<br>
@@ -42,7 +42,7 @@ Commands for know private and public ip <br>
 Private IP → `ip addr`, `hostname -I`<br>
 Public IP → `curl ifconfig.me`, `curl ipinfo.io/ip`<br>
 
-## Task <br>
+## Task 3
 Q1) What does /24 mean in 192.168.1.0/24?<br>
 192.168.1.0/24 means that 24 bits are used for the network part, leaving 8 bits for host addresses.<br>
 So, total IPs = 2⁸ = 256<br>
@@ -58,7 +58,7 @@ Q2) How many usable hosts in a /24? A /16? A /28?<br>
 Q3) What is a Subnet Mask?<br>
 ANS : A subnet mask defines which part of an IP is network and which part is host.<br>
 
-Q4) Explain in your own words: why do we subnet?
+Q4) Explain in your own words: why do we subnet? <br>
 We subnet to devide a large network into smaller, manageable parts to improve performance, security and efficient usage of ips.
 
 ## Task 4
