@@ -43,11 +43,11 @@ This is concept-focused — research, understand, and document in your own words
 3. Explain in your own words: why do we subnet?
 4. Quick exercise — fill in:
 
-| CIDR | Subnet Mask | Total IPs | Usable Hosts |
-|------|-------------|-----------|--------------|
-| /24  | ?           | ?         | ?            |
-| /16  | ?           | ?         | ?            |
-| /28  | ?           | ?         | ?            |
+| CIDR | Subnet Mask   | Total IPs | Usable Hosts |
+|------|-------------  |-----------|--------------|
+| /24  | 255.255.255.0 | 256       | 254          |
+| /16  | 255.255.0.0   | 65,536    | 65,534       |
+| /28  |255.255.255.240| 16        | 14           |
 
 ---
 
