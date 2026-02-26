@@ -4,7 +4,7 @@
 
 ## OSI Layers :
 OSI (Open Systems Interconnection) introduced a 7-layer architecture for data transfer between network nodes.
-7) Application layers
+(7) Application layers
    - User by end-user application
    - Provides network services like:
      - HTTP/HTTPS(web)
@@ -12,15 +12,15 @@ OSI (Open Systems Interconnection) introduced a 7-layer architecture for data tr
      - SMTP(main)
    - Example : web browser
 
-6) Presentation layers
+(6) Presentation layers
    - Encryption and Compress data
    - Example : Encryption (SSL/TLS), data encoding (JPEG, MP3)
      
-5) Session layers
+(5) Session layers
    - Manages sessions (connections) between devices
    - Example : Session login, logout management
      
-4) Transport layers
+(4) Transport layers
    - Ensures reliable data transfer
    - Handles:
      - Segmentation
@@ -28,17 +28,17 @@ OSI (Open Systems Interconnection) introduced a 7-layer architecture for data tr
      - Error recovery
    - Protocols: TCP, UDP
      
-3) Network layers
+(3) Network layers
    - Handles routing and logical addressing
    - Finds the best path for data
    - Protocol: IP (Internet Protocol)
    - Device: Router
      
-2) Data Link layers
+(2) Data Link layers
    - Handles physical addressing (MAC address)
    - Device: Switch
      
-1) Physical layers
+(1) Physical layers
    - Responsible for actual data transmission in bits (0s & 1s)
    - Includes cables, voltages, connectors
    - Device: Hub, cables
@@ -46,21 +46,21 @@ OSI (Open Systems Interconnection) introduced a 7-layer architecture for data tr
 ## TCP/IP Stack Layers
 
 The TCP/IP model consists of 4 layers:
-4) Application Layer
+(4) Application Layer
   - Provides network services to user applications
   - Examples: HTTP, HTTPS, FTP, SMTP, DNS, SSH
 
-3) Transport Layer
+(3) Transport Layer
    - Ensures end-to-end communication and reliability
    - Protocols: TCP, UDP
 
-2) Internet Layer
+(2) Internet Layer
    - Responsible for logical addressing and routing
    - Protocol: IP (Internet Protocol)
    - Example: IP, ICMP
    - Device: Router
 
-1) Network Access Layer
+(1) Network Access Layer
    - Handles physical transmission and MAC addressing
    - Combines OSI Physical + Data Link layers
    - Examples: Ethernet, Wi-Fi
