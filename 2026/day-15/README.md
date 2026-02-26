@@ -55,15 +55,15 @@ This is concept-focused — research, understand, and document in your own words
 1. What is a port? Why do we need them?
 2. Document these common ports:
 
-| Port | Service |
-|------|---------|
-| 22   | ?       |
-| 80   | ?       |
-| 443  | ?       |
-| 53   | ?       |
-| 3306 | ?       |
-| 6379 | ?       |
-| 27017| ?       |
+| Port | Service  |
+|------|----------|
+| 22   | SSH      |
+| 80   | HTTP     |
+| 443  | HTTPS    |
+| 53   | DNS      |
+| 3306 | MYSQL(DB)|
+| 6379 | Redis    |
+| 27017| MongoDB  |
 
 3. Run `ss -tulpn` — match at least 2 listening ports to their services
 
