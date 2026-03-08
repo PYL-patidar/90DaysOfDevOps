@@ -47,28 +47,28 @@ docker kill<br>
   - May cause data loss
 
 ## Task 4 : Working with Running Containers
-- Run an Nginx container in detached mode
+- Run an Nginx container in detached mode  <br>
   Command: `docker run -d -p 80:80 nginx`
-- View its logs
+- View its logs  <br>
   Command : `docker logs <container_id>`
-- View real-time logs (follow mode)
+- View real-time logs (follow mode)  <br>
   Command: `docker logs -f <container_ID>`
-- Exec into the container and look around the filesystem
+- Exec into the container and look around the filesystem  <br>
   Command :  `docker exec -it <container_id> bash`
-- Run a single command inside the container without entering it
+- Run a single command inside the container without entering it  <br>
   Command :  `docker exec <container_ID> <command>`
-- Inspect the container — find its IP address, port mappings, and mounts
-  Command : docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container_name>
-  docker inspect -f '{{.Mounts}}' <container_name>
-  docker port <container_name>
+- Inspect the container — find its IP address, port mappings, and mounts  <br>
+  docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container_name>  <br>
+  docker inspect -f '{{.Mounts}}' <container_name>  <br>
+  docker port <container_name> <br>
 
   ## Task 5
 
 - Stop all running containers in one command <br>
   Command : `docker stop $(docker ps -q)`
-- Remove all stopped containers in one command
+- Remove all stopped containers in one command  <br>
   Command: `docker rm $(docker ps -aq)`
-- Remove unused images
+- Remove unused images  <br>
   Command : `docker images prune`
-- Check how much disk space Docker is using
+- Check how much disk space Docker is using  <br>
   Command : `docker system df`
