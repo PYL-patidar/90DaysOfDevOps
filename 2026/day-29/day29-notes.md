@@ -24,20 +24,20 @@ docker engine <br>
 docker daemon <br>
 docker registry <br>
 
-Developer
-   │
-   │ docker command
-   ▼
-Docker Client
-   │
-   ▼
-Docker Daemon
-   │
-   ├── Builds Images
-   ├── Runs Containers
-   │
-   ▼
-Docker Registry (pull/push images)
+Developer <br>
+   │ <br>
+   │ docker command <br>
+   ▼<br>
+Docker Client<br>
+   │<br>
+   ▼<br>
+Docker Daemon<br>
+   │<br>
+   ├── Builds Images<br>
+   ├── Runs Containers<br>
+   │<br>
+   ▼<br>
+Docker Registry (pull/push images)<br>
 
 ## Docker Client: 
 The Docker Client is the tool that users interact with.
