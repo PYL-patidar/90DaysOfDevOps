@@ -73,44 +73,45 @@ It includes:
 
 ## Docker Registry
 A Docker registry is a place where Docker images are stored and shared.
-The most commonly used registry is Docker Hub.
+The most commonly used registry is Docker Hub.<br>
 Docker Registry (pull/push images)
 
 # Task 2: Install Docker
-- Install Docker on your machine
-  Command : sudo apt-get && apt-get install docker.io 
-- Verify the installation
-  Command : docker --version
-- Run the hello-world container
-  Command : docker run hello-world
-Output:
+
+- Install Docker on your machine<br>
+  Command : sudo apt-get && apt-get install docker.io<br> 
+- Verify the installation<br>
+  Command : docker --version<br>
+- Run the hello-world container<br>
+  Command : docker run hello-world<br>
+Output:<br>
 The Output gives an overview of how the Docker client communicates with the Docker daemon. The daemon then pulls the image from the registry and creates a new container from that image.
 
 # Task 3 : 
 
-- Run an Nginx container and access it in your browser
-  Command : `docker run -d -p 80:80 nginx`
+- Run an Nginx container and access it in your browser<br>
+  Command : `docker run -d -p 80:80 nginx`<br>
 Open port 80 and connect container port with host port and with -d it will run in detach mode that meand container will run in background.<br>
 
-- Run an Ubuntu container in interactive mode — explore it like a mini Linux machine
+- Run an Ubuntu container in interactive mode — explore it like a mini Linux machine<br>
   Command : `docker run -d -it ubuntu`
-  - It will run as an interative mode
-  - Go to inside the container
+  - It will run as an interative mode<br>
+  - Go to inside the container<br>
     Command used : `docker exec -it <container_id> bash`
-- List all running containers
+- List all running containers<br>
   Command : `docker ps`
-- List all containers (including stopped ones)
+- List all containers (including stopped ones)<br>
   Command : `docker ps -a`
-- Stop and remove a container
+- Stop and remove a container<br>
   Command : `docker stop <container_id> && docker rm <container_id>`
   
 # Task 4 :
 
-- Run a container in detached mode — what's different?
-ANS: Running a container in detached mode in Docker means the container runs in the background instead of occupying the terminal. This allows us to use the terminal for other commands without interruption.
-- Give a container a custom name & Map a port from the container to your host
+- Run a container in detached mode — what's different?<br>
+ANS: Running a container in detached mode in Docker means the container runs in the background instead of occupying the terminal. This allows us to use the terminal for other commands without interruption.<br>
+- Give a container a custom name & Map a port from the container to your host<br>
   Command : `docker run --name <custom_name> -d -p 80:80 nginx `
-- Check logs of a running container
+- Check logs of a running container <br>
   Command : `docker logs <container_id>`
-- Run a command inside a running container
+- Run a command inside a running container<br>
   Command : `docker exec <container_id>`
