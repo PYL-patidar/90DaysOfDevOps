@@ -78,12 +78,12 @@ Docker Registry (pull/push images)
 
 # Task 2: Install Docker
 
-- Install Docker on your machine<br>
-  Command : sudo apt-get && apt-get install docker.io<br> 
+- Install Docker on your machine <br>
+  Command : `sudo apt-get && apt-get install docker.io` <br> 
 - Verify the installation<br>
-  Command : docker --version<br>
+  Command : `docker --version`<br>
 - Run the hello-world container<br>
-  Command : docker run hello-world<br>
+  Command : `docker run hello-world`<br>
 Output:<br>
 The Output gives an overview of how the Docker client communicates with the Docker daemon. The daemon then pulls the image from the registry and creates a new container from that image.
 
