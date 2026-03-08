@@ -87,6 +87,30 @@ Output:
 The Output gives an overview of how the Docker client communicates with the Docker daemon. The daemon then pulls the image from the registry and creates a new container from that image.
 
 # Task 3 : 
-- Run an Nginx container and access it in your browser
 
-# Task 4
+- Run an Nginx container and access it in your browser
+  Command : `docker run -d -p 80:80 nginx`
+Open port 80 and connect container port with host port and with -d it will run in detach mode that meand container will run in background.<br>
+
+- Run an Ubuntu container in interactive mode — explore it like a mini Linux machine
+  Command : `docker run -d -it ubuntu`
+  - It will run as an interative mode
+  - Go to inside the container
+    Command used : `docker exec -it <container_id> bash`
+- List all running containers
+  Command : `docker ps`
+- List all containers (including stopped ones)
+  Command : `docker ps -a`
+- Stop and remove a container
+  Command : `docker stop <container_id> && docker rm <container_id>`
+  
+# Task 4 :
+
+- Run a container in detached mode — what's different?
+ANS: Running a container in detached mode in Docker means the container runs in the background instead of occupying the terminal. This allows us to use the terminal for other commands without interruption.
+- Give a container a custom name & Map a port from the container to your host
+  Command : `docker run --name <custom_name> -d -p 80:80 nginx `
+- Check logs of a running container
+  Command : `docker logs <container_id>`
+- Run a command inside a running container
+  Command : `docker exec <container_id>`
