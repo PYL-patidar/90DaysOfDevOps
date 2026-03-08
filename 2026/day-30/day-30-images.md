@@ -61,3 +61,14 @@ docker kill<br>
   Command : docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container_name>
   docker inspect -f '{{.Mounts}}' <container_name>
   docker port <container_name>
+
+  ## Task 5
+
+- Stop all running containers in one command <br>
+  Command : `docker stop $(docker ps -q)`
+- Remove all stopped containers in one command
+  Command: `docker rm $(docker ps -aq)`
+- Remove unused images
+  Command : `docker images prune`
+- Check how much disk space Docker is using
+  Command : `docker system df`
