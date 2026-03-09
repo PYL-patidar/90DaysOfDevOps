@@ -29,3 +29,11 @@ RUN apt install -y nginx`
 - When would you use CMD vs ENTRYPOINT?
   Use CMD when you want a default command that can be overridden. <br>
   Use ENTRYPOINT when the container should run a fixed executable and only accept arguments. <br>
+
+- Why does layer order matter for build speed in Docker? <br>
+In Docker, each instruction in a Dockerfile (like FROM, COPY, RUN) creates a separate layer. Docker uses layer caching to speed up the image build process.
+Because of caching, the order of layers matters. <br>
+Explanation <br>
+Docker builds images from top to bottom. <br>
+If a layer has not changed, Docker reuses the cached layer. <br>
+But if a layer changes, Docker must rebuild that layer and all layers after it.<br>
