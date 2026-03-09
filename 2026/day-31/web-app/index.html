@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		    <meta charset="UTF-8">
+		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		    <title>My DevOps Web App</title>
+
+		    <style>
+        		body{
+		            font-family: Arial, sans-serif;
+			    background: #0f172a;
+			    color: white;
+			    text-align: center;
+			    padding: 100px;
+				  }
+
+	        	.container{
+			     background: #1e293b;
+			     padding: 40px;
+			     border-radius: 10px;
+			     width: 400px;
+			     margin: auto;
+			     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+		             }
+
+		        button{
+			    background: #38bdf8;
+			    border: none;
+		            padding: 12px 20px;
+			    border-radius: 5px;
+			    cursor: pointer;
+	                    font-size: 16px;	
+			}
+			button:hover{
+	       		    background: #0ea5e9;
+	           }
+	    </style>
+	</head>
+
+	<body>
+
+		<div class="container">
+			<h1>🚀 Welcome</h1>
+			<h2>My First Web App</h2>
+
+			<p>This page is running inside a container.</p>
+
+			<button onclick="showMessage()">Click Me</button>
+
+			<p id="message"></p>
+		</div>
+
+		<script>
+			function showMessage(){
+			document.getElementById("message").innerHTML = "Your web app is working successfully!";
+			}
+		</script>
+
+	</body>
+</html>
