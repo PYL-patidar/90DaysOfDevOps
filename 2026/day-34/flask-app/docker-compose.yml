@@ -1,0 +1,41 @@
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql_cont
+    ports:
+      - "3306:3306"
+    env_file:
+      - .env
+    healthcheck:
+        test: ["CMD-SHELL", "mysqladmin ping -h localhost -uroot -p$MYSQL_ROOT_PASSWORD"]
+        interval: 10s
+        retries: 5
+        timeout: 5s
+    restart: always
+    volumes:
+      - my-data:/var/lib/mysql
+    networks: 
+      - webapp-net
+
+  web-app:
+    build: .
+    container_name: webapp_cont
+    ports:
+      - "5000:5000"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks: 
+      - webapp-net
+
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+    networks:
+      - webapp-net
+
+volumes:
+  my-data:
+networks:
+  webapp-net:
