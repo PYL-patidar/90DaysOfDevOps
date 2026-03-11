@@ -5,5 +5,6 @@ fruits:
   - apple
   - banana
   - mango
+    
 All items are written in a single line inside square brackets.<br>
 fruits: [apple, banana, mango] <br>
