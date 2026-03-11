@@ -1,0 +1,15 @@
+server:
+  - name: nginx
+  - ip: 172.17.0.1
+  - port: 80
+
+database:
+  host: mysql
+  name: mysql
+  credentials:
+    user: devops
+    password: devops@123
+
+
+#startup_script: |
+  
