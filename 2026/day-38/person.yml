@@ -1,0 +1,17 @@
+name: payal
+role: devops
+
+experience_years: 
+  - 2025
+  - 2026
+
+learning: DevOps
+tools:
+  - Docker
+  - Github
+  - Linux
+  - Jenkind
+  - Github-Action
+
+hobbies: [reading, traveling, dancing, cricket]
+
