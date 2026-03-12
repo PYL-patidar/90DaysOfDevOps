@@ -8,7 +8,8 @@ The DevOps engineer or developer builds the application to create a deployable a
 The engineer runs a build command such as:  
 - mvn package (for Java/Maven)
 - npm run build (for Node.js)
-Example: `mvn clean package` or `npm run build`  
+Example: `mvn clean package` or `npm run build`
+
 3.Test the build  
 Run the application locally or in a staging environment to make sure everything works correctly.  
 4.Login to the production server  
