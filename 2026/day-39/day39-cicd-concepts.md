@@ -73,3 +73,4 @@ Pipeline Anotomy:
 ## task 4
 CI/CD pipeline draw for this scenarion :  
 A developer pushes code to GitHub. The app is tested, built into a Docker image, and deployed to a staging server.  
+![Description of the image](./images/20260312_131942.jpg)
