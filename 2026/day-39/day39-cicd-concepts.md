@@ -53,12 +53,19 @@ Continues Delivery is the next step after Continues Integration. After the code 
 - what "delivery" means:
 'Delivery' means the application is automatically packaged and prepared for release so it can be deployed to production at any time with minimal manual effort.
 
-Q) Continuous Deployment — how it differs from Delivery, when teams use it  
-Continues Deployment  
+Q) Continuous Deployment — how it differs from Delivery, when teams use it    
 COntinues deployments means that after the code is built and tested successfully, it is automatically deployed to production without maunal approval.  
-- How it is different from Continuous Delivery:
-Continuous Delivery: Deployment to production requires manual approval.
-Continuous Deployment: Deployment to production happens automatically after tests pass.
-
-- when a team use it:
+- How it is different from Continuous Delivery:  
+Continuous Delivery: Deployment to production requires manual approval.  
+Continuous Deployment: Deployment to production happens automatically after tests pass.  
+- when a team use it:  
 Team use Continues delivery when they want very fast release and frequent update, such as in web applications, SaaS platforms and startups that deploy many time a day.
+
+## Task 3
+Pipeline Anotomy:  
+- Trigger: A trigger is an event that starts or actives a CI/CD pipeline automatically.
+- Stages: Stages are the different steps in CI/CD pipeline where specific task are performed in sequence to deliver an application like build, test, deploy.
+- job: A job is a set of steps that run together in a pipeline stage to perform a specific task.
+- step:  a single command or action inside a job.
+- Runner: A runner is machine that execute the jobs and steps of CICD.
+- Artifect: An artifect file is the output file generated after the build process in CI/CD pipeline. 
