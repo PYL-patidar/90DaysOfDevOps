@@ -69,3 +69,7 @@ Pipeline Anotomy:
 - step:  a single command or action inside a job.
 - Runner: A runner is machine that execute the jobs and steps of CICD.
 - Artifect: An artifect file is the output file generated after the build process in CI/CD pipeline. 
+
+## task 4
+CI/CD pipeline draw for this scenarion :  
+A developer pushes code to GitHub. The app is tested, built into a Docker image, and deployed to a staging server.  
