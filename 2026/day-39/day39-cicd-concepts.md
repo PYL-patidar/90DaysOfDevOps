@@ -37,7 +37,7 @@ Therefore, we use automation tools to deploy applications. Automating the proces
 ## Task 2
 CI vs CD  
 
-- Continuous Integration — what happens, how often, what it catches
+Q) Continuous Integration — what happens, how often, what it catches
 - What happens:
 In Continues Integration, devloper regularly merge their code to the shared repository such as github. Every time code is pushed, an automated pipeline runs to build the application and execute automated tests.  
 - how often:
@@ -45,5 +45,20 @@ CI runs every time a developer pushes code or create pulll requests, sometimes m
 - what it catches:
 CI helps detect build failures, integration issues and bug earlys before the code reaches production. It ensures that new code changes do not break the existing application.
 
-- Continuous Delivery — how it's different from CI, what "delivery" means
+Q) Continuous Delivery — how it's different from CI, what "delivery" means
 Continues Delivery is the next step after Continues Integration. After the code is built and tested automatically, it is prepared and kept ready for deployment to production.
+- how it's different from CI  
+  - CI focuses on automatically building and testing the code.
+  - Continues Delivery ensures the applicarion is always ready to be deployed after those tests pass.
+- what "delivery" means:
+'Delivery' means the application is automatically packaged and prepared for release so it can be deployed to production at any time with minimal manual effort.
+
+Q) Continuous Deployment — how it differs from Delivery, when teams use it  
+Continues Deployment  
+COntinues deployments means that after the code is built and tested successfully, it is automatically deployed to production without maunal approval.  
+- How it is different from Continuous Delivery:
+Continuous Delivery: Deployment to production requires manual approval.
+Continuous Deployment: Deployment to production happens automatically after tests pass.
+
+- when a team use it:
+Team use Continues delivery when they want very fast release and frequent update, such as in web applications, SaaS platforms and startups that deploy many time a day.
