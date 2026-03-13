@@ -1,0 +1,28 @@
+name: hello
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+
+      - name: Show geet from github-action
+        run: echo "Hello from GitHub Actions!"
+
+      - name: Print current date and time
+        run: date 
+
+      - name: Printing Name of branch that trigger
+        run: echo " Branch is ${{ github.ref_name }}"
+
+      - name: list file in the repo
+        run: git ls-files
+
+      - name: Print Runners's OS
+        run: echo "${{ runner.os }}"
