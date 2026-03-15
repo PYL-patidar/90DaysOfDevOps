@@ -1,0 +1,14 @@
+name: shedule task
+
+on:
+    schedule:
+        - cron: '0 0 * * *'
+
+jobs:
+    schedule-task:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print message
+              run: echo "schedule at midnight every day"
+
+    

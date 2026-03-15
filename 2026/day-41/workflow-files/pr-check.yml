@@ -1,0 +1,27 @@
+# this is the name of workflow
+name: PR workflow
+
+# event trigger situation
+on: 
+  pull_request: 
+    branches:
+      - main
+    types: [opened, synchronize]
+
+# job that perform task
+jobs:
+  pr-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout the code
+        uses: actions/checkout@v4
+
+      - name: Print PR branch(source)
+        run: echo "PR check for source branch ${{ github.head_ref }}"
+
+      - name: Print PR branch(destination)
+        run: echo "PR check for target branch ${{github.base_ref}}"
+
+  
+  
