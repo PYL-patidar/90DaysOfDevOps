@@ -14,7 +14,7 @@ Reusable Workflow (workflow_call)
 → Calls a complete workflow (multiple jobs)  
 → Used at the job level  
 → Example: 
-`jobs: |
+`jobs: 
   call-workflow:  
     uses: org/repo/.github/workflows/deploy.yml`  
     
