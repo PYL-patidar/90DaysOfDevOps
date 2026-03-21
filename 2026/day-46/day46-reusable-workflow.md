@@ -14,18 +14,18 @@ Reusable Workflow (workflow_call)
 → Calls a complete workflow (multiple jobs)  
 → Used at the job level  
 → Example:  
-`jobs:
-  call-workflow:
-    uses: org/repo/.github/workflows/deploy.yml`
+`jobs:  
+  call-workflow:  
+    uses: org/repo/.github/workflows/deploy.yml`  
     
-Regular Action (uses:)
+Regular Action (uses:)  
 A regular action is a single reusable unit of work (like a function).  
 → Performs one specific task  
 → Used inside steps  
 → Can be JavaScript, Docker, or composite action  
 → Example: checkout code, build Docker image  
-`steps:
-   uses: actions/checkout@v4`
+`steps:  
+   uses: actions/checkout@v4`  
    
 Q) Where must a reusable workflow file live?  
 `.github/workflows/ directory of a repository`  
