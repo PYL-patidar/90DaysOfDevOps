@@ -8,7 +8,8 @@ Q) What is the workflow_call trigger?
 workflow_call allows one workflow to be called by another workflow. 
 
 Q) How is calling a reusable workflow different from using a regular action (uses:)?  
-Reusable Workflow vs Regular Action  
+
+## Reusable Workflow vs Regular Action  
 Reusable Workflow (workflow_call)  
 → Calls a complete workflow (multiple jobs)
 → Used at the job level
@@ -58,6 +59,7 @@ Examples:
   - API keys
   - DockerHub token
   - AWS credentials  
+
 Example in reusable workflow  
 `on:
   workflow_call:
@@ -87,15 +89,46 @@ Defining outputs in reusable workflow
 Accessing output in caller workflow  
 `run: echo "Build version: ${{ needs.build.outputs.build_version }}"`
 
-
 ##  Regular Actions
 Regular actions are pre-built actions created by GitHub or the community that you can directly use in your workflows.  
 They are usually stored in GitHub repositories.  
 Example:
 - `uses: actions/checkout@v4`
+
 This action is created by GitHub and it downloads your repository code to the runner.
 Regular actions save time because they already perform common DevOps tasks.
 
 ## Composite Action  
 A custom action is an action created by us to automate a task that can be reused in workflows.  
-Custom Action = our own reusable automation step
+Custom Action = our own reusable automation step  
+  
+Types of Custom Actions   
+Composite Action - Combines multiple workflow steps  
+Docker Action -	Runs inside a Docker container  
+JavaScript Action	- Runs Node.js scripts  
+## Create a Custom Action (Composite Action)  
+Step 1: Create Folder  
+Inside your repository create:  
+  
+`.github/
+   actions/
+      greeting-action/
+         action.yml`
+         
+Step 2: Create action.yml  
+`name: "Greeting Action"
+description: "Print greeting and system information"
+inputs:
+  name:
+    description: "Name of the person"
+    required: true
+runs:
+  using: "composite"
+  steps:
+      - name: Print greeting
+      shell: bash
+      run: echo "Hello ${{ inputs.name }}!"
+      - name: Print date
+      shell: bash
+      run: echo "Date: $(date)"
+      - name: Print OS`
