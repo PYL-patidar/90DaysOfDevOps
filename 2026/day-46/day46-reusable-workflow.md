@@ -10,20 +10,20 @@ workflow_call allows one workflow to be called by another workflow.
 Q) How is calling a reusable workflow different from using a regular action (uses:)?  
 
 ## Reusable Workflow vs Regular Action  
-Reusable Workflow (workflow_call)  
-→ Calls a complete workflow (multiple jobs)
-→ Used at the job level
-→ Example:
+Reusable Workflow (workflow_call)    
+→ Calls a complete workflow (multiple jobs)  
+→ Used at the job level  
+→ Example:  
 `jobs:
   call-workflow:
     uses: org/repo/.github/workflows/deploy.yml`
     
 Regular Action (uses:)
-A regular action is a single reusable unit of work (like a function).
-→ Performs one specific task
-→ Used inside steps
-→ Can be JavaScript, Docker, or composite action
-→ Example: checkout code, build Docker image
+A regular action is a single reusable unit of work (like a function).  
+→ Performs one specific task  
+→ Used inside steps  
+→ Can be JavaScript, Docker, or composite action  
+→ Example: checkout code, build Docker image  
 `steps:
    uses: actions/checkout@v4`
    
