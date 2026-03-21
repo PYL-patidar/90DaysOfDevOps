@@ -13,8 +13,8 @@ Q) How is calling a reusable workflow different from using a regular action (use
 Reusable Workflow (workflow_call)    
 → Calls a complete workflow (multiple jobs)  
 → Used at the job level  
-→ Example:  
-`jobs:  
+→ Example: 
+`jobs: |
   call-workflow:  
     uses: org/repo/.github/workflows/deploy.yml`  
     
