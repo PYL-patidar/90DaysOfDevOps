@@ -1,0 +1,16 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: trial-pod
+  labels:
+    app: trial
+    environment: dev
+    team: practice
+
+spec:
+  containers:
+    - name: trial-cont
+      image: nginx
+      ports:
+        - containerPort: 80
+

@@ -1,0 +1,10 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: busybox-pad
+
+spec:
+  containers:
+    - name: busybox-cont
+      image: busybox:latest
+      command: ["sh", "-c", "echo Hello from Busybox && sleep 3600"]
