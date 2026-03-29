@@ -38,11 +38,13 @@ Q3) What happens if a worker node goes down?
 ANS: If the worker node goes down, the Pods running on that node will stoped working. The Kubernetes Controller Manager detects that node is not 
 availabel. Then Kubernetes create a new Pods on the other healty worker node to keep the application running.
 
-## Task 3 : Setup Kubernetes
 Kubectl is a command line tool for communicate wuth the Kubernetes cluster.  
 
 For the cluster, I chose kind because it provides Kubernetes in Docker. It creates Kubernetes nodes as Docker containers, which makes it 
 easy to run a cluster on a local system. It is lightweight, fast, and very useful for learning and testing Kubernetes locally using Docker.  
 
-## Task 4
+Q4) What is a kubeconfig? Where is it stored on your machine?  
+A kubeconfig file is a configuration file used by kubectl to connect to a Kubernetes cluster. It contains information about the cluster,
+user credentials, and context so kubectl knows which cluster to connect to and how to authenticate.
 
+Location: By default, the kubeconfig file is stored at `~/.kube/config`.
