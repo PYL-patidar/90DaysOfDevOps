@@ -48,3 +48,12 @@ A kubeconfig file is a configuration file used by kubectl to connect to a Kubern
 user credentials, and context so kubectl knows which cluster to connect to and how to authenticate.
 
 Location: By default, the kubeconfig file is stored at `~/.kube/config`.
+
+Q5) What each kube-system pod does?
+In Kubernetes, the kube-system namespace contains pods that run the core cluster components.
+kube-apiserver → Entry point of the cluster, handles requests from kubectl
+kube-scheduler → Decides which node will run the Pod
+kube-controller-manager → Maintains the desired state of the cluster
+etcd → Stores cluster data
+kube-proxy → Manages networking between services and Pods
+CoreDNS → Provides DNS inside the cluster.
