@@ -39,3 +39,16 @@ Final YML for Pod
    containers:`
    `- name: nginx
      image: nginx`
+
+Q) Difference: Imperative (kubectl run) vs Declarative (kubectl apply -f)  
+Imperative: We give commands directly to Kubernetes (e.g., kubectl run).  
+- Mostly used for quick tasks or testing.
+- No YAML file needed
+Declarative: We define the desired state in a YAML file and apply it using kubectl apply -f.
+- YAML configuration file
+- Version control possible (Git)
+- Easy to update and manage
+- Used in production
+
+Q) What happens when you delete a standalone Pod?
+When we delete a standalone pod in Kuberenetes, It permanently removed and not recreate automaticaly, because no controlller manage it to recreate. 
