@@ -15,10 +15,10 @@ Q3) Difference between ClusterIP, NodePort, and LoadBalancer:
 | NodePort | Inside and outside the cluster | Exposes the Service on a specific port of each node. External users can access the application using NodeIP:NodePort. |
 | LoadBalancer | Public internet access | Creates an external load balancer (usually in cloud environments) and provides a public IP to access the application. Traffic is automatically distributed to the Pods. |
 
-In short: 
-ClusterIP → Internal communication inside the cluster
-NodePort → External access using Node IP and port
-
+In short:   
+ClusterIP → Internal communication inside the cluster  
+NodePort → External access using Node IP and port  
+  
 Q4) How Kubernetes DNS works for service discovery?
 ANS: Kubernetes DNS allows Pods to discover and communicate with Service useing DNS Name and IP addresses.  
 When a Service is created, Kubernetes automatically create a DNS entry for that Service.
