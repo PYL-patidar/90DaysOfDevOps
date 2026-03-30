@@ -19,30 +19,24 @@ In short:
 ClusterIP → Internal communication inside the cluster  
 NodePort → External access using Node IP and port  
   
-Q4) How Kubernetes DNS works for service discovery?
-ANS: Kubernetes DNS allows Pods to discover and communicate with Service useing DNS Name and IP addresses.  
-When a Service is created, Kubernetes automatically create a DNS entry for that Service.
-Pods inside the cluster can access the Service using the DNS name in this format:  
-<service-name>.<namespace>.svc.cluster.local
-Example:
-If a Service name is web-app in the default namespace, Pods can access it using:
-web-app.default.svc.cluster.local
+Q4) How Kubernetes DNS works for service discovery?  
+ANS: Kubernetes DNS allows Pods to discover and communicate with Service useing DNS Name and IP addresses.    
+When a Service is created, Kubernetes automatically create a DNS entry for that Service.  
+Pods inside the cluster can access the Service using the DNS name in this format:      
+`<service-name>.<namespace>.svc.cluster.local`  
+Example:  
+If a Service name is web-app in the default namespace, Pods can access it using:  
+`web-app.default.svc.cluster.local`  
 
+Q5) What Endpoints are and how to inspect them?  
 Endpoints represent the actual IP addresses of the Pods that a Service sends traffic to.
-When a Service selects Pods using labels, Kubernetes automatically creates an Endpoints object that contains the IP addresses and ports of those Pods.
-
-So when a request comes to the Service, it forwards the traffic to one of the Pod IPs listed in the Endpoints.
-
-How to inspect Endpoints
-
-1. List all Endpoints
-
-kubectl get endpoints
-
-2. Check Endpoints of a specific Service
-
-kubectl get endpoints <service-name>
-
-3. Get detailed information
-
-kubectl describe endpoints <service-name>
+When a Service selects Pods using labels, Kubernetes automatically creates an Endpoints object that contains the IP addresses and ports of those Pods.  
+How to inspect Endpoints  
+1. List all Endpoints  
+`kubectl get endpoints`
+  
+2. Check Endpoints of a specific Service  
+`kubectl get endpoints <service-name>`
+  
+3. Get detailed information  
+`kubectl describe endpoints <service-name>`
