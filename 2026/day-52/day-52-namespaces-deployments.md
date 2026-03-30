@@ -3,3 +3,5 @@ ANS: Namespace in Kubernetes is a logical partition inside a cluster that helps 
 deployments.
 
 Q2) Your Deployment manifest and an explanation of each section.
+
+![deployment-image](C:\Users\A\Pictures\Screenshots\Screenshot (236).png)
