@@ -1,0 +1,5 @@
+Q1) What namespaces are and why you would use them?
+ANS: Namespace in Kubernetes is a logical partition inside a cluster that helps organize, isolate and manage resources like pods, services and
+deployments.
+
+Q2) Your Deployment manifest and an explanation of each section.
