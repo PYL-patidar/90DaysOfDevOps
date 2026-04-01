@@ -10,8 +10,8 @@ A Persistent Volume Claim (PVC) is a request for storage made by a user or appli
   
 The PVC requests storage, and Kubernetes binds the PVC to a suitable PV. After binding, the Pod can use that storage through the PVC.  
 
-Q3) Static vs dynamic provisioning.
-ANS: 
+Q3) Static vs dynamic provisioning.  
+ANS:
 Static Provisioning:  
 In static provisioning, the Persistent Volume (PV) is created manually by the administrator before it is used. The PV already exists in the   
 cluster, and when a user creates a Persistent Volume Claim (PVC), Kubernetes binds that PVC with the available PV that matches the requirements.  
