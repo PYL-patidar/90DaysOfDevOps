@@ -1,4 +1,4 @@
-Q1) What ConfigMaps and Secrets are and when to use each?
+Q1) What ConfigMaps and Secrets are and when to use each?  
 Our application needs configuration — database URLs, feature flags, API keys.  
 Hardcoding these into container images means rebuilding every time a value changes.  
 Kubernetes solves this with ConfigMaps and Secrets.
@@ -44,7 +44,6 @@ env:
       key: APP_ENV  
   
 Volume Mount    
-  
 volumes:  
 - name: config-volume  
   configMap:  
