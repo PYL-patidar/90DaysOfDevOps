@@ -4,7 +4,7 @@ When a container is recreated, its internal data are lost.
 To ensure that important application data is not lost, Kubernetes provide Persistent Volume(PV), which allow data to be store outside the 
 container so it remain safe even if Container or Pod restart.  
 
-Q2) What PVs and PVCs are and how they relate.
+Q2) What PVs and PVCs are and how they relate?  
 ANS: A Persistent Volume (PV) is a piece of storage available in the Kubernetes cluster that is used to store application data.  
 A Persistent Volume Claim (PVC) is a request for storage made by a user or application.   
   
