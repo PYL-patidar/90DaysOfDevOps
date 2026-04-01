@@ -1,0 +1,23 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: dynamic-vol-nginx
+
+spec:
+  containers:
+    - name: dynamic-vol-nginx
+      image: nginx
+      ports:
+        - containerPort: 80
+      command: ["sh", "-c"]
+      args:
+        - echo "Hello from Kubernetes!! at $(date)" >> /mnt/data/hello.txt
+      volumeMounts:
+        - name: dynamic-pvc
+          mountPath: "/mnt/data"
+  volumes:
+    - name: dynamic-pvc
+      persistentVolumeClaim:
+        claimName: dynamic-pvc
+      
+      

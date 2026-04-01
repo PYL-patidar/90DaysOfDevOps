@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: static-pod
+spec:
+  containers:
+  - name: static-cont
+    image: busybox
+    command: ["sh", "-c" ]
+    args:
+    - echo "Message written at $(date) " >> /data/message.txt && sleep 3600
+    volumeMounts:
+      - name: static-pvc-volume
+        mountPath: "/data"
+
+  volumes:
+    - name: static-pvc-volume
+      persistentVolumeClaim:
+        claimName: myclaim
+
+
+
