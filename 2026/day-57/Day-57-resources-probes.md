@@ -9,12 +9,10 @@ Requests = minimum resources the container needs to start.
   
 Limits-> Used for Enforcement  
 Limit = maximum resources the container is allowed to use.  
-- Kubernetes enforces limits at runtime.  
-If it tries to use more:  
-CPU → Kubernetes slows it down (throttle)  
-Memory → Container is killed (OOMKilled)  
+- Kubernetes enforces limits at runtime.    
   
-Q) What happens when CPU or memory limits are exceeded    
+Q) What happens when CPU or memory limits are exceeded  
+
 When CPU limit is exceeded:  
 If a container tries to use more CPU than its limit:  
 - Kubernetes does NOT kill the container  
