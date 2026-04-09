@@ -16,7 +16,7 @@ Q) What happens when CPU or memory limits are exceeded
 When CPU limit is exceeded:  
 If a container tries to use more CPU than its limit:  
 - Kubernetes does NOT kill the container  
-- Instead, it throttles (slows down) the CPU usage
+- Instead, it throttles (slows down) the CPU usage  
 Result:  
   - Application runs slowed
   - Container keeps running
@@ -29,6 +29,7 @@ Result:
   - Pod status shows OOMKilled (Out Of Memory)  
   
 Q) Liveness vs readiness vs startup probes?  
+
 Probes in Kubernetes, helps kubernetes check application health and if it is unhealthy automatically take action like restarting containers
 and controling  traffics.  
 It is a health check mechanism used by Kubernetes to monitor a container.  
@@ -38,7 +39,7 @@ These are three types: Liveness, Readiness and Startup Probes.
 Purpose    
 Checks if the container is still alive (running properly).  
 - If the liveness probe fails, Kubernetes restarts the container.
-- Useful when an app gets stuck or deadlocked.
+- Useful when an app gets stuck or deadlocked.  
 Real-life Example    
 Imagine:  
 - our application hangs but the process is still running.  
