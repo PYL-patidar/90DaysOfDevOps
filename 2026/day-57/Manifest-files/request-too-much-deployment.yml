@@ -1,0 +1,26 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: test-pending
+  namespace: nginx
+  labels:
+    name: pending
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pending
+  template:
+    metadata:
+      name: test-pending-pod
+      labels:
+        app: pending
+    spec:
+      containers:
+        - name: test-pending-cont
+          image: nginx:latest
+          resources:
+            requests:
+              cpu: "100"
+              memory: "128Gi"

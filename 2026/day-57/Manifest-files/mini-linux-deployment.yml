@@ -1,0 +1,31 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: polinux-deployment
+  namespace: nginx
+  labels:
+    app: polinux
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: polinux
+
+  template:
+    metadata:
+      name: polinux-pod
+      labels:
+        app: polinux
+    spec:
+      containers:
+        - name: polinux-cont
+          image: polinux/stress:latest
+          command: ["stress"]
+          args: ["--vm", "1", "--vm-bytes", "200M", "--vm-hang", "1"]
+          resources:
+            requests:
+              memory: "50Mi"
+            limits:
+              memory: "100Mi"
+

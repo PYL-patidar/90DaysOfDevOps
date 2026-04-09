@@ -1,0 +1,25 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: test-liveness-probe
+  namespace: nginx
+
+spec:
+  containers:
+    - name: liveness-probe
+      image: busybox:latest
+      command:
+        - sh
+        - -c
+        - |
+          touch /tmp/healthy
+          sleep 30
+          rm -f /tmp/healthy
+          sleep 600
+      livenessProbe:
+        exec:
+          command:
+            - cat
+            - /tmp/healthy
+        periodSeconds: 5
+        failureThreshold: 3

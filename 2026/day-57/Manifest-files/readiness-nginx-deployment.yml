@@ -1,0 +1,21 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: readiness-probe
+  namespace: nginx
+  labels:
+    app: nginx
+
+spec:
+  containers:
+    - name: nginx-readiness-probe
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+
+      readinessProbe:
+        httpGet:
+          path: /
+          port: 80
+        initialDelaySeconds: 10
+        periodSeconds: 10
