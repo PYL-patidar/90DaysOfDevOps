@@ -1,4 +1,25 @@
-Q) Requests vs limits (scheduling vs enforcement)  
+## Resource Management  
+Problem: What happens if we deploy without resource limits?  
+When we deploy a Pod or Deployment without defining resource requests and limits, the container can consume all available CPU and memory on the node.  
+  
+During normal traffic it may work fine, but during traffic spikes:   
+  - The container may start using more CPU and memory  
+  - It can consume most of the node resources  
+  - Other Pods on the node may not get enough resources  
+  - Eventually the node resources can get exhausted  
+  
+So to prevent this situation, Kubernetes provides resource management.  
+  
+Solution: Resource Requests and Limits  
+Kubernetes allows us to define how much resource an application needs.  
+
+### Resource Requests:  
+The minimum resources required by a container.  
+  
+### Resource Limits  
+The maximum resources a container is allowed to use.  
+  
+Q1) Requests vs limits (scheduling vs enforcement)  
 
 In Kubernetes, resources and limits control how resources scheduled and enforces for a pod.  
 
@@ -11,19 +32,21 @@ Limits-> Used for Enforcement
 Limit = maximum resources the container is allowed to use.  
 - Kubernetes enforces limits at runtime.    
   
-Q) What happens when CPU or memory limits are exceeded  
+Q2) What happens when CPU or memory limits are exceeded  
 
 When CPU limit is exceeded:  
 If a container tries to use more CPU than its limit:  
 - Kubernetes does NOT kill the container  
-- Instead, it throttles (slows down) the CPU usage  
+- Instead, it throttles (slows down) the CPU usage
+- CPU Behavior: CPU is a compressible resource. 
 Result:  
   - Application runs slowed
   - Container keeps running
   
 When Memory limit is exceeded:  
 If a container uses more memory than its limit:  
-- Kubernetes kills the container  
+- Kubernetes kills the container
+- Because Memory is a non-compressible resource.
 Result:  
   - Container terminated  
   - Pod status shows OOMKilled (Out Of Memory)  
@@ -32,7 +55,7 @@ Q) Liveness vs readiness vs startup probes?
 
 Probes in Kubernetes, helps kubernetes check application health and if it is unhealthy automatically take action like restarting containers
 and controling  traffics.  
-It is a health check mechanism used by Kubernetes to monitor a container.  
+
 These are three types: Liveness, Readiness and Startup Probes.  
 
 ## Liveness Probs:
