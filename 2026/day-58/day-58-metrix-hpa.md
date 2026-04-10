@@ -1,3 +1,4 @@
+Conseptual clearity need before hands-on
 ## Scaling
 If our application regularly reaches its limits because of increasing traffic, simply setting limits is not enough.
 We need scaling to handle higher load.
@@ -16,6 +17,8 @@ Increasing or decreasing the number of Pods running for an application based on 
 Instead of relying on one Pod, Kubernetes can run multiple Pods of the same application to distribute the traffic.
 
 Scaling can be done in two ways: manual scaling and automatic scaling.
+
+Q1) What the Metrics Server is and why HPA needs it
 
 Manual Scaling
 In manual scaling, we manually increase or decrease the number of Pods.
@@ -43,3 +46,26 @@ It then provides this information to Kubernetes so that the system can understan
 Based on these utilization metrics, Kubernetes can make decisions such as when to increase or decrease the number of Pods.
 
 This data is mainly used by components like: Horizontal Pod Autoscaler
+
+Q1) What the Metrics Server is and why HPA needs it.
+Metrics Server is a small service in Kubernetes that collects resource usage data from all nodes and pods in the cluster.
+It gathers metrics like: CPU usage, Memory usage
+It gets this data from the kubelet running on each node and then stores it temporarily so Kubernetes components can access it.
+
+Q) Why Horizontal Pod Autoscaler (HPA) needs Metrics Server?
+The Horizontal Pod Autoscaler needs resource usage data to decide when to increase or decrease Pods.
+But Kubernetes does not collect CPU and memory usage metrics by default in a way that HPA can use directly.
+That’s why we need: Kubernetes Metrics Server
+
+- Metrics Server collects metrics
+It gathers CPU and memory usage from nodes and kubelets in the cluster.
+
+- Metrics are exposed through the Kubernetes API
+Commands like this use those metrics:
+`kubectl top pods
+kubectl top nodes`
+
+- HPA reads these metrics
+The Horizontal Pod Autoscaler checks the current utilization.
+
+Q) How HPA calculates desired replicas
