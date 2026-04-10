@@ -3,6 +3,7 @@ Conseptual clearity need before hands-on
 If our application regularly reaches its limits because of increasing traffic, simply setting limits is not enough.
 We need scaling to handle higher load.
 
+
 For example:
   - Users suddenly start accessing the application
   - Traffic increases rapidly
