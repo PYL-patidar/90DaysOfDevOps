@@ -59,15 +59,30 @@ The Horizontal Pod Autoscaler needs resource usage data to decide when to increa
 But Kubernetes does not collect CPU and memory usage metrics by default in a way that HPA can use directly.
 That’s why we need: Kubernetes Metrics Server
 
-- Metrics Server collects metrics
-It gathers CPU and memory usage from nodes and kubelets in the cluster.
-
 - Metrics are exposed through the Kubernetes API
 Commands like this use those metrics:
 `kubectl top pods
 kubectl top nodes`
 
-- HPA reads these metrics
-The Horizontal Pod Autoscaler checks the current utilization.
+Q) How HPA calculates desired replicas?
+The desired replicas are calculated using a simple formula.
+HPA Desired Replicas Formula
 
-Q) How HPA calculates desired replicas
+Desired Replicas = ⌈ Current Replicas × Current Metric Value / Target Metric Value ⌉
+
+Q) The difference between autoscaling/v1 and v2
+autoscaling/v1 (Basic Version)
+autoscaling/v1 is the older and simpler version of HPA.
+Features
+- Supports only CPU utilization scaling
+- Very simple configuration
+- No advanced scaling control
+
+autoscaling/v2 (Advanced Version)
+autoscaling/v2 is the newer and more powerful version.
+Features
+- Supports multiple metrics
+- Supports CPU and Memory
+- Supports custom metrics
+- Supports external metrics
+- Supports scaling behavior control (scale up/down speed)
