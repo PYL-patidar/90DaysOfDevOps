@@ -1,7 +1,6 @@
 ## Helm : Kubernetes Package Manager  
 ### Task 1:  
-### Helm Installation:  
-Helm automatically creates all the required Kubernetes resources using templates.  
+### Helm Installation:    
 Helm works alongside kubectl and interacts with the cluster using the same kubeconfig.  
 Helm was installed on Windows using Winget.  
 Command used: `winget install Helm.Helm`  
