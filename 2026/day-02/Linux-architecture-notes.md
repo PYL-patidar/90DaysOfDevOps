@@ -21,8 +21,8 @@ Kernel is a machine that works on binary language we can't directly interact wit
 When the system starts, the first process that runs is systemd (PID 1), and along with it, the systemctl command is used to control and manage all system processes."
 
 <p align="center">
-  <img src="images/2026/System-starting-process.jpg" alt="Linux Architecture" width="650">
-</p>g
+  <img src="images/System-starting-process.jpg" alt="Linux Architecture" width="650">
+</p>
 
 ## Process Management Commands: 
 - ps--> give snapshot of active processes <br>
