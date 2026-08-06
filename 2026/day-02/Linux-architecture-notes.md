@@ -7,7 +7,7 @@ Linux works on the 4 Layers Architecture
 3. Linux Kernel  
 4. Hardware
 
-![Linux Architecture](images/Screenshot(78).png)
+![Linux Architecture](images/Linux-architecture.png)
 
 ## "Everything in linux is a process"  
   
