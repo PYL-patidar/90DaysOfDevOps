@@ -1,7 +1,10 @@
-"Linux Architecture" <br>
+## "Linux Architecture" <br>
 
-Linux work on the 4 Layers architecture <br>
-1.User/application--> 2.Shell--> 3.Linux Kernel--> 4.Hardware <br>
+Linux work on the 4 Layers architecture  
+1.User/application  
+2.Shell  
+3.Linux Kernel  
+4.Hardware  
 
 one Main point about linux is "Everything in linux is a process" <br>
 
