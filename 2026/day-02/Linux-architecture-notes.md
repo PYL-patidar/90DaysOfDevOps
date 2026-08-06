@@ -28,6 +28,8 @@ When the system starts, the first process that runs is systemd (PID 1), and alon
   <img src="images/System-starting-process.jpg" alt="Linux Architecture" width="650">
 </p>
 
+A process is an instance of a running program. Each process has its own PID, memory, and resources managed by the Linux kernel.
+
 ## Process Management Commands: 
 
 | Command   | Purpose                                       | Example                 |
