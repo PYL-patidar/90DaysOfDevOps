@@ -29,6 +29,27 @@ When the system starts, the first process that runs is systemd (PID 1), and alon
 </p>
 
 ## Process Management Commands: 
+
+| Command   | Purpose                                       | Example                 |
+| --------- | --------------------------------------------- | ----------------------- |
+| `ps`      | Display running processes                     | `ps`                    |
+| `ps -ef`  | Show all running processes with details       | `ps -ef`                |
+| `ps aux`  | Display all processes with CPU & memory usage | `ps aux`                |
+| `top`     | View running processes in real time           | `top`                   |
+| `htop`    | Interactive process viewer (if installed)     | `htop`                  |
+| `pidof`   | Find the PID of a process                     | `pidof sshd`            |
+| `pgrep`   | Search process by name                        | `pgrep nginx`           |
+| `kill`    | Terminate a process by PID                    | `kill 1234`             |
+| `kill -9` | Forcefully terminate a process                | `kill -9 1234`          |
+| `pkill`   | Kill process by name                          | `pkill firefox`         |
+| `killall` | Kill all instances of a process               | `killall chrome`        |
+| `jobs`    | Show background jobs                          | `jobs`                  |
+| `bg`      | Resume a stopped job in the background        | `bg %1`                 |
+| `fg`      | Bring a background job to the foreground      | `fg %1`                 |
+| `nohup`   | Run a process even after logout               | `nohup python app.py &` |
+| `nice`    | Start a process with a priority               | `nice -n 10 command`    |
+| `renice`  | Change priority of a running process          | `renice 5 -p 1234`      |
+
 - ps--> give snapshot of active processes <br>
 - top--> dynamic real-time ruuning processes <br>
 - htop--> can scroll verticle as wel as horizentally to see more effectively to porcesses <br>
