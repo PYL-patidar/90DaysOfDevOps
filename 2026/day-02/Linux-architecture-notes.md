@@ -2,13 +2,6 @@
 
 Linux works on the 4 Layers Architecture 
 
-## Linux Architecture
-
-| Diagram | Explanation |
-|---------|-------------|
-| <img src="images/Linux-architecture.png" width="300"> | Linux Architecture has four layers:<br><br>1. User Space<br>2. Shell<br>3. Kernel<br>4. Hardware |
-
-
 1. User/application  
 2. Shell  
 3. Linux Kernel  
