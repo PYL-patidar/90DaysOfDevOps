@@ -12,9 +12,6 @@ Linux works on the 4 Layers Architecture
 </p>
 
 
-## "Everything in linux is a process"  
-  
-
 As we power on our system firstly BIOS loads the hardwares. BIOS is a pre-installed firamware on motherboad that is initialize the hardwares and perform POST(Power-On-Self-Test). Then GNU GRUB(grand Unified Bootloader) is a software that is load the operating system and our system starts to run. As soon as system runs the first process to run is systemd/init PID 1 and systemctl is controller that are attached with the process.  
 
 Kernel is a machine that works on binary language we can't directly interact with that. so for communicate with the Kernel we have to give the instrucation to Shell and the talk with kernel. 
@@ -24,6 +21,9 @@ When the system starts, the first process that runs is systemd (PID 1), and alon
 <p align="center">
   <img src="images/System-starting-process.jpg" alt="Linux Architecture" width="650">
 </p>
+
+## "Everything in linux is a process"  
+  
 
 A process is an instance of a running program. Each process has its own PID, memory, and resources managed by the Linux kernel.
 
