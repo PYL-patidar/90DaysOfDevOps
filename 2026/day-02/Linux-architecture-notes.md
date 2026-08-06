@@ -8,7 +8,7 @@ Linux works on the 4 Layers Architecture
 4. Hardware
 
 <img width="3945" height="1831" alt="20260806_113832" src="https://github.com/user-attachments/assets/70c6bba6-bda2-434f-96da-e5a6e378d9eb" />
-![Linux Architecture](/images/Screenshot%20(78).png)
+![Linux Architecture](2026/day-02/images/Screenshot(78).png)
 
 ## "Everything in linux is a process"  
   
