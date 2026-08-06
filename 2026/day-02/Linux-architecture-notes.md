@@ -11,6 +11,10 @@ Linux works on the 4 Layers Architecture
   <img src="images/Linux-architecture.png" alt="Linux Architecture" width="650">
 </p>
 
+<p align="center">
+  <img src="images/linux-architecture.png" alt="Linux Architecture" width="650">
+</p>
+
 ## "Everything in linux is a process"  
   
 
