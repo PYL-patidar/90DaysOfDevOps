@@ -36,7 +36,7 @@ When the system starts, the first process that runs is systemd (PID 1), and alon
 | `ps -ef`  | Show all running processes with details       | `ps -ef`                |
 | `ps aux`  | Display all processes with CPU & memory usage | `ps aux`                |
 | `top`     | View running processes in real time           | `top`                   |
-| `htop`    | Interactive process viewer (if installed)     | `htop`                  |
+| `htop`    | Interactive process viewer                    | `htop`                  |
 | `pidof`   | Find the PID of a process                     | `pidof sshd`            |
 | `pgrep`   | Search process by name                        | `pgrep nginx`           |
 | `kill`    | Terminate a process by PID                    | `kill 1234`             |
@@ -50,9 +50,16 @@ When the system starts, the first process that runs is systemd (PID 1), and alon
 | `nice`    | Start a process with a priority               | `nice -n 10 command`    |
 | `renice`  | Change priority of a running process          | `renice 5 -p 1234`      |
 
-- ps--> give snapshot of active processes <br>
-- top--> dynamic real-time ruuning processes <br>
-- htop--> can scroll verticle as wel as horizentally to see more effectively to porcesses <br>
-- ps aux --> active ruuning process in detailed <br>
+## Process State
+
+🟢 R – Running  
+🟡 S – Interruptible Sleep (waiting for an event)  
+🟠 D – Uninterruptible Sleep (usually waiting for disk I/O)  
+🔴 T – Stopped or traced  
+⚫ Z – Zombie (The process has finished execution, but its parent process hasn't collected its exit status yet.)  
+
+A zombie:  
+- Uses almost no CPU or memory.  
+- Keeps a PID until it's cleaned up.  
 
 for kowns more about command /bin folder contains the all command and we can use `man` command to see the manual. 
