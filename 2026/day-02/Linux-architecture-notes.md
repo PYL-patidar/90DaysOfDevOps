@@ -5,11 +5,13 @@ Linux works on the 4 Layers Architecture
 1. User/application  
 2. Shell  
 3. Linux Kernel  
-4. Hardware  
+4. Hardware
+
+<img width="3945" height="1831" alt="20260806_113832" src="https://github.com/user-attachments/assets/70c6bba6-bda2-434f-96da-e5a6e378d9eb" />
+
 
 ## "Everything in linux is a process"  
-
-![Linux Architecture](day-02/images/Screenshot(78).png)   
+  
 
 As we power on our system firstly BIOS loads the hardwares. BIOS is a pre-installed firamware on motherboad that is initialize the hardwares and perform POST(Power-On-Self-Test). Then GNU GRUB(grand Unified Bootloader) is a software that is load the operating system and our system starts to run. As soon as system runs the first process to run is systemd/init PID 1 and systemctl is controller that are attached with the process.  
 
