@@ -1,4 +1,4 @@
-## Linux Architecture
+## Linux Architecture, Process and Systemd
 
 Linux works on the 4 Layers Architecture 
 
@@ -59,6 +59,8 @@ A process is an instance of a running program. Each process has its own PID, mem
 
 A zombie:  
 - Uses almost no CPU or memory.  
-- Keeps a PID until it's cleaned up.  
+- Keeps a PID until it's cleaned up.
+
+## Systemd
 
 for kowns more about command /bin folder contains the all command and we can use `man` command to see the manual. 
