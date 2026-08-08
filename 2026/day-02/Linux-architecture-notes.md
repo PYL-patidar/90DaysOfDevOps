@@ -1,20 +1,71 @@
-## Linux Architecture, Process and Systemd
+# Linux Architecture, Processes and Systemd
 
-# Linux Architecture
+## Linux Architecture
 Linux works on the 4 Layers Architecture 
 
-1. User/application  
-2. Shell  
-3. Linux Kernel  
-4. Hardware
 
 <p align="center">
   <img src="images/Linux-architecture.png" alt="Linux Architecture" width="650">
 </p>
 
+                    Linux
+                      │
+        ┌─────────────┴─────────────┐
+        │                           │
+    USER SPACE                 KERNEL SPACE
+        │                           │
+    systemd                        Kernel
+        │                           │
+    Services                  Process management
+    nginx                       Memory management
+    sshd                        Filesystem
+    Docker                      Networking
+
+┌─────────────────────────────────────┐
+│              USER SPACE             │
+│                                     │
+│  Applications                       │
+│  ├── Nginx                          │
+│  ├── Python                         │
+│  ├── Git                            │
+│  └── MySQL                          │
+│                                     │
+│  Shells                             │
+│  ├── Bash                           │
+│  └── Zsh                            │
+│                                     │
+│  System Utilities                   │
+│  ├── ls                             │
+│  ├── ps                             │
+│  └── systemctl                      │
+│                                     │
+│  Libraries                          │
+└─────────────────────────────────────┘
+                  ↓
+            System Calls
+                  ↓
+┌─────────────────────────────────────┐
+│             KERNEL SPACE             │
+│                                     │
+│ Linux Kernel                        │
+│ ├── Process Management              │
+│ ├── Memory Management               │
+│ ├── File System                     │
+│ ├── Networking                      │
+│ └── Device Drivers                  │
+└─────────────────────────────────────┘
+                  ↓
+┌─────────────────────────────────────┐
+│              HARDWARE               │
+│ CPU | RAM | Disk | Network | I/O    │
+└─────────────────────────────────────┘
+
+
 - User Space: The area where user-level applications, shells, system utilities, services, and libraries run. These programs do not have direct unrestricted access to hardware; they interact with the kernel through system calls.
 
 - Kernel Space: The privileged area where the Linux kernel operates and manages system resources such as CPU, memory, processes, filesystems, networking, and hardware.
+
+- A system call is a controlled interface through which a user-space program requests a service from the Linux kernel.
 
 As we power on our system firstly BIOS loads the hardwares. BIOS is a pre-installed firamware on motherboad that is initialize the hardwares and perform POST(Power-On-Self-Test). Then GNU GRUB(grand Unified Bootloader) is a software that is load the operating system and our system starts to run. As soon as system runs the first process to run is systemd/init PID 1 and systemctl is controller that are attached with the process.  
 
@@ -65,6 +116,28 @@ A zombie:
 - Uses almost no CPU or memory.  
 - Keeps a PID until it's cleaned up.
 
+
+
+
 ## Systemd
 
 for kowns more about command /bin folder contains the all command and we can use `man` command to see the manual. 
+
+6. Why User Space and Kernel Space Are Separated
+
+This separation provides important benefits.
+
+Security
+
+A normal application cannot freely access kernel memory or hardware.
+
+Stability
+
+If a user-space application crashes, it normally does not crash the entire operating system.
+
+Isolation
+
+Processes can be isolated from one another.
+Controlled Resource Access
+
+Applications must request privileged operations through controlled interfaces such as system calls.
