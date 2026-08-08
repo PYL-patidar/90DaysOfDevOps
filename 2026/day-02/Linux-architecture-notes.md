@@ -1,5 +1,6 @@
 ## Linux Architecture, Process and Systemd
 
+# Linux Architecture
 Linux works on the 4 Layers Architecture 
 
 1. User/application  
@@ -11,6 +12,9 @@ Linux works on the 4 Layers Architecture
   <img src="images/Linux-architecture.png" alt="Linux Architecture" width="650">
 </p>
 
+- User Space: The area where user-level applications, shells, system utilities, services, and libraries run. These programs do not have direct unrestricted access to hardware; they interact with the kernel through system calls.
+
+- Kernel Space: The privileged area where the Linux kernel operates and manages system resources such as CPU, memory, processes, filesystems, networking, and hardware.
 
 As we power on our system firstly BIOS loads the hardwares. BIOS is a pre-installed firamware on motherboad that is initialize the hardwares and perform POST(Power-On-Self-Test). Then GNU GRUB(grand Unified Bootloader) is a software that is load the operating system and our system starts to run. As soon as system runs the first process to run is systemd/init PID 1 and systemctl is controller that are attached with the process.  
 
