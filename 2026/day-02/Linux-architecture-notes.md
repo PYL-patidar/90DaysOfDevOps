@@ -135,17 +135,18 @@ After the kernel initializes the system, `systemd` normally starts as the first 
 
 Main responsibilities:
 
-Starts services during boot
-Stops and restarts services
-Manages service dependencies
-Monitors services
-Manages system targets
-Handles logging through `journald` (when configured)
+- Starts services during boot
+- Stops and restarts services
+- Manages service dependencies
+- Monitors services
+- Manages system targets
+- Handles logging through `journald` (when configured)
 
-`systemd` → Actual system/service manager (PID 1) 
-systemctl → Command-line tool used to control `systemd`
 
-Example: 
-systemctl status nginx  
+- `systemd` → Actual system/service manager (PID 1) 
+- systemctl → Command-line tool used to control `systemd`
+
+`Example: systemctl status nginx  `
 systemctl start nginx  
 
+`
