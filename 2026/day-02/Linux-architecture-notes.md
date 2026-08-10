@@ -2,7 +2,7 @@
 
 # 1. Linux Architecture
 
-### Basic Architecture
+## Basic Architecture
 
 Application → Shell → Kernel → Hardware
 
