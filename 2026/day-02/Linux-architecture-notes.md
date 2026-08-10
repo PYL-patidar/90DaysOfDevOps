@@ -43,16 +43,17 @@ User Space ↔ System Call Interface ↔ Kernel Space ↔ Hardware
 
 Here, space refers to a protected area of memory and execution privileges provided by the operating system.
 
-User Space:
+## User Space:
 
 The area where user-level applications, shells, system utilities, services, and libraries run with restricted privileges.
 
 Examples:
-bash, ls, python, nginx
+bash, ls, python, nginx, docker 
+
 
 User-space programs cannot directly access hardware or kernel memory. They request kernel services through system calls.
 
-Kernel Space:
+## Kernel Space:
 
 The privileged area where the Linux kernel runs and manages system resources.
 
@@ -64,7 +65,7 @@ Main responsibilities:
   - Networking → TCP/IP, sockets, routing
   - Security → permissions, access control, SELinux
 
-System Call
+## System Call
 
 A system call is a controlled interface through which a user-space program requests a service from the Linux kernel.
 
@@ -76,27 +77,21 @@ close()
 fork()
 exec()
 
-Security → Applications cannot freely access kernel memory or hardware.
-Stability → A user-space application crash normally does not crash the entire OS.
-Isolation → Processes are protected from one another.
-Controlled Access → Privileged operations are performed through the kernel.
+# Processes
 
-# 2. Processes
+## Process Creation
 
 As we power on our system firstly BIOS loads the hardwares. BIOS is a pre-installed firamware on motherboad that is initialize the hardwares and perform POST(Power-On-Self-Test). Then GNU GRUB(grand Unified Bootloader) is a software that is load the operating system and our system starts to run. As soon as system runs the first process to run is systemd/init PID 1 and systemctl is controller that are attached with the process.  
 
 Kernel is a machine that works on binary language we can't directly interact with that. so for communicate with the Kernel we have to give the instrucation to Shell and the talk with kernel. 
+The kernel runs in privileged mode and provides controlled services to user-space programs through system calls.
 
-When the system starts, the first process that runs is systemd (PID 1), and along with it, the systemctl command is used to control and manage all system processes."
+When the system starts, the first process that runs On systems using systemd, systemd runs as PID 1. and along with it, the systemctl command is used to control and manage all system processes."
 
 <p align="center">
   <img src="images/System-starting-process.jpg" alt="Linux Architecture" width="650">
 </p>
 
-## "Everything in linux is a process"  
-  
-
-A process is an instance of a running program. Each process has its own PID, memory, and resources managed by the Linux kernel.
 
 ## Process Management Commands: 
 
@@ -133,27 +128,25 @@ A zombie:
 - Keeps a PID until it's cleaned up.
 
 
+# 3. Systemd
 
+`systemd` is the system and service manager used by many modern Linux distributions.
 
-## Systemd
+After the kernel initializes the system, `systemd` normally starts as the first user-space process:
 
-for kowns more about command /bin folder contains the all command and we can use `man` command to see the manual. 
+Main responsibilities:
 
-This separation provides important benefits.
+Starts services during boot
+Stops and restarts services
+Manages service dependencies
+Monitors services
+Manages system targets
+Handles logging through `journald` (when configured)
 
-Security
+`systemd` → Actual system/service manager (PID 1) 
+systemctl → Command-line tool used to control `systemd`
 
-A normal application cannot freely access kernel memory or hardware.
+Example: 
+systemctl status nginx  
+systemctl start nginx  
 
-Stability
-
-If a user-space application crashes, it normally does not crash the entire operating system.
-
-Isolation
-
-Processes can be isolated from one another.
-Controlled Resource Access
-
-Applications must request privileged operations through controlled interfaces such as system calls.
-
-The area where user-level applications, shells, system utilities, services, and libraries run. These programs do not have direct unrestricted access to hardware; they interact with the kernel through system calls.
