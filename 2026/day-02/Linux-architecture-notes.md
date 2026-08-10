@@ -1,12 +1,31 @@
 # Linux Architecture, Processes and Systemd
 
-## Linux Architecture
-Linux works on the 4 Layers Architecture 
+# 1. Linux Architecture
+
+### Basic Architecture
+
+Application → Shell → Kernel → Hardware
 
 
 <p align="center">
   <img src="images/Linux-architecture.png" alt="Linux Architecture" width="650">
 </p>
+
+## Technically Better Model
+
+User Space ↔ System Call Interface ↔ Kernel Space ↔ Hardware
+
+                    LINUX 
+                     │ 
+           ┌─────────┴─────────┐
+           ↓                   ↓
+      USER SPACE          KERNEL SPACE 
+           │                   │ 
+           └──── System Calls ─┘ 
+                    │  
+                    ↓
+                 Hardware
+
 
                     Linux
                       │
@@ -21,51 +40,48 @@ Linux works on the 4 Layers Architecture
     sshd                        Filesystem
     Docker                      Networking
 
-┌─────────────────────────────────────┐
-│              USER SPACE             │
-│                                     │
-│  Applications                       │
-│  ├── Nginx                          │
-│  ├── Python                         │
-│  ├── Git                            │
-│  └── MySQL                          │
-│                                     │
-│  Shells                             │
-│  ├── Bash                           │
-│  └── Zsh                            │
-│                                     │
-│  System Utilities                   │
-│  ├── ls                             │
-│  ├── ps                             │
-│  └── systemctl                      │
-│                                     │
-│  Libraries                          │
-└─────────────────────────────────────┘
-                  ↓
-            System Calls
-                  ↓
-┌─────────────────────────────────────┐
-│             KERNEL SPACE             │
-│                                     │
-│ Linux Kernel                        │
-│ ├── Process Management              │
-│ ├── Memory Management               │
-│ ├── File System                     │
-│ ├── Networking                      │
-│ └── Device Drivers                  │
-└─────────────────────────────────────┘
-                  ↓
-┌─────────────────────────────────────┐
-│              HARDWARE               │
-│ CPU | RAM | Disk | Network | I/O    │
-└─────────────────────────────────────┘
 
+Here, space refers to a protected area of memory and execution privileges provided by the operating system.
 
-- User Space: The area where user-level applications, shells, system utilities, services, and libraries run. These programs do not have direct unrestricted access to hardware; they interact with the kernel through system calls.
+User Space:
 
-- Kernel Space: The privileged area where the Linux kernel operates and manages system resources such as CPU, memory, processes, filesystems, networking, and hardware.
+The area where user-level applications, shells, system utilities, services, and libraries run with restricted privileges.
 
-- A system call is a controlled interface through which a user-space program requests a service from the Linux kernel.
+Examples:
+bash, ls, python, nginx
+
+User-space programs cannot directly access hardware or kernel memory. They request kernel services through system calls.
+
+Kernel Space:
+
+The privileged area where the Linux kernel runs and manages system resources.
+
+Main responsibilities:
+  - Process Management → CPU scheduling, multitasking, IPC
+  - Memory Management → allocation, virtual memory, paging, swapping
+  - File System Management → VFS and filesystem operations
+  - Device Management → device drivers and hardware communication
+  - Networking → TCP/IP, sockets, routing
+  - Security → permissions, access control, SELinux
+
+System Call
+
+A system call is a controlled interface through which a user-space program requests a service from the Linux kernel.
+
+Examples:
+open()
+read()
+write()
+close()
+fork()
+exec()
+
+Security → Applications cannot freely access kernel memory or hardware.
+Stability → A user-space application crash normally does not crash the entire OS.
+Isolation → Processes are protected from one another.
+Controlled Access → Privileged operations are performed through the kernel.
+
+# 2. Processes
 
 As we power on our system firstly BIOS loads the hardwares. BIOS is a pre-installed firamware on motherboad that is initialize the hardwares and perform POST(Power-On-Self-Test). Then GNU GRUB(grand Unified Bootloader) is a software that is load the operating system and our system starts to run. As soon as system runs the first process to run is systemd/init PID 1 and systemctl is controller that are attached with the process.  
 
@@ -123,8 +139,6 @@ A zombie:
 
 for kowns more about command /bin folder contains the all command and we can use `man` command to see the manual. 
 
-6. Why User Space and Kernel Space Are Separated
-
 This separation provides important benefits.
 
 Security
@@ -141,3 +155,5 @@ Processes can be isolated from one another.
 Controlled Resource Access
 
 Applications must request privileged operations through controlled interfaces such as system calls.
+
+The area where user-level applications, shells, system utilities, services, and libraries run. These programs do not have direct unrestricted access to hardware; they interact with the kernel through system calls.
