@@ -80,12 +80,12 @@ exec()`
 
 ## Process Creation
 
-As we power on our system firstly BIOS loads the hardwares. BIOS is a pre-installed firamware on motherboad that is initialize the hardwares and perform POST(Power-On-Self-Test). Then GNU GRUB(grand Unified Bootloader) is a software that is load the operating system and our system starts to run. As soon as system runs the first process to run is systemd/init PID 1 and systemctl is controller that are attached with the process.  
+- As we power on our system firstly BIOS loads the hardwares. BIOS is a pre-installed firamware on motherboad that is initialize the hardwares and perform POST(Power-On-Self-Test). Then GNU GRUB(grand Unified Bootloader) is a software that is load the operating system and our system starts to run. As soon as system runs the first process to run is systemd/init PID 1 and systemctl is controller that are attached with the process.  
 
-Kernel is a machine that works on binary language we can't directly interact with that. so for communicate with the Kernel we have to give the instrucation to Shell and the talk with kernel. 
+- Kernel is a machine that works on binary language we can't directly interact with that. so for communicate with the Kernel we have to give the instrucation to Shell and the talk with kernel. 
 The kernel runs in privileged mode and provides controlled services to user-space programs through system calls.
 
-When the system starts, the first process that runs On systems using systemd, systemd runs as PID 1. and along with it, the systemctl command is used to control and manage all system processes."
+- When the system starts, the first process that runs On systems using systemd, systemd runs as PID 1. and along with it, the systemctl command is used to control and manage all system processes."
 
 <p align="center">
   <img src="images/System-starting-process.jpg" alt="Linux Architecture" width="650">
