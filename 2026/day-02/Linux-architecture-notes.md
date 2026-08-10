@@ -143,9 +143,9 @@ Main responsibilities:
 - Handles logging through `journald` (when configured)
 
 
-`systemd` → Actual system/service manager (PID 1) 
+`systemd` → Actual system/service manager (PID 1)   
 systemctl → Command-line tool used to control `systemd`
 
-`Example: systemctl status nginx 
+`Example: systemctl status nginx  
 systemctl start nginx`
 
