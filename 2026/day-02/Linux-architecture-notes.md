@@ -68,13 +68,13 @@ Main responsibilities:
 
 A system call is a controlled interface through which a user-space program requests a service from the Linux kernel.
 
-Examples:
+`Examples:
 open()
 read()
 write()
 close()
 fork()
-exec()
+exec()`
 
 # Processes
 
