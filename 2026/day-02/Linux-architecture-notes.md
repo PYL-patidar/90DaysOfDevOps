@@ -47,8 +47,7 @@ Here, space refers to a protected area of memory and execution privileges provid
 
 The area where user-level applications, shells, system utilities, services, and libraries run with restricted privileges.
 
-Examples:
-bash, ls, python, nginx, docker 
+`Examples: bash, ls, python, nginx, docker `
 
 
 User-space programs cannot directly access hardware or kernel memory. They request kernel services through system calls.
