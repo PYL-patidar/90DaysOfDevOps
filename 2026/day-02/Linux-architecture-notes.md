@@ -149,3 +149,15 @@ systemctl → Command-line tool used to control `systemd`
 `Example: systemctl status nginx`  
 `systemctl start nginx`
 
+# User Space, Kernel Space & System Calls — Practical Commands
+
+| Command                  | Use Case                                                                       |
+| ------------------------ | ------------------------------------------------------------------------------ |
+| `ps -ef`                 | View user processes and kernel threads                                         |
+| `top`                    | Monitor CPU usage, including **user (`us`) and kernel/system (`sy`) CPU time** |
+| `strace ls`              | Observe system calls made by a command                                         |
+| `strace -c ls`           | Get a summary of system calls                                                  |
+| `strace -p <PID>`        | Trace system calls of a running process                                        |
+| `cat /proc/<PID>/status` | Inspect process information from the kernel                                    |
+| `cat /proc/<PID>/maps`   | View a process's memory mappings                                               |
+| `vmstat 1`               | Monitor CPU, memory, swap, I/O, and system activity                            |
