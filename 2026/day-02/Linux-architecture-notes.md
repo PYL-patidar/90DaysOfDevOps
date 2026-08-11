@@ -2,14 +2,16 @@
 
 # 1. Linux Architecture
 
-## Basic Architecture
-
 Application → Shell → Kernel → Hardware
-
 
 <p align="center">
   <img src="images/Linux-architecture.png" alt="Linux Architecture" width="650">
 </p>
+
+1. Application → Applications are programs that users use to perform specific tasks, such as text editors, browsers, compilers, and other software.
+2. Shell -> A shell is a command-line interface that allows users to interact with the operating system by entering commands.
+3. Kernel -> The Linux kernel is the core component of the operating system. It manages system resources such as CPU, memory, processes, filesystems, networking, devices, and security, and provides services to user-space applications through system calls.
+4. Hardware -> Hardware includes physical resources.
 
 ## Technically Better Model
 
@@ -45,10 +47,9 @@ Here, space refers to a protected area of memory and execution privileges provid
 
 ## User Space:
 
-The area where user-level applications, shells, system utilities, services, and libraries run with restricted privileges.
+User space contains applications and many user-level programs, shells, system utilities, services, and libraries.
 
 `Examples: bash, ls, python, nginx, docker `
-
 
 User-space programs cannot directly access hardware or kernel memory. They request kernel services through system calls.
 
@@ -57,39 +58,41 @@ User-space programs cannot directly access hardware or kernel memory. They reque
 The privileged area where the Linux kernel runs and manages system resources.
 
 Main responsibilities:
-  - Process Management → CPU scheduling, multitasking, IPC
+  - Process Management → CPU scheduling, multitasking
   - Memory Management → allocation, virtual memory, paging, swapping
-  - File System Management → VFS and filesystem operations
+  - File System Management → filesystem operations
   - Device Management → device drivers and hardware communication
   - Networking → TCP/IP, sockets, routing
-  - Security → permissions, access control, SELinux
+  - Security → permissions, access control
 
 ## System Call
 
-A system call is a controlled interface through which a user-space program requests a service from the Linux kernel.
+A system call is a controlled interface through which a user-space program requests a service from the Linux kernel.  
+It is basically a controlled entry point into the kernel.
 
 `Examples:
 open()
 read()
 write()
-close()
-fork()
-exec()`
+close()`
 
-# Processes
+# 2. Processes
 
-## Process Creation
+## Process
+A process is a running instance of a program. When we execute a program, Linux creates a process and the kernel manages its resources, scheduling, state, and lifecycle. 
 
-- As we power on our system firstly BIOS loads the hardwares. BIOS is a pre-installed firamware on motherboad that is initialize the hardwares and perform POST(Power-On-Self-Test). Then GNU GRUB(grand Unified Bootloader) is a software that is load the operating system and our system starts to run. As soon as system runs the first process to run is systemd/init PID 1 and systemctl is controller that are attached with the process.  
+`Example: ps, ps aux, top, pstree, `
 
-- Kernel is a machine that works on binary language we can't directly interact with that. so for communicate with the Kernel we have to give the instrucation to Shell and the talk with kernel. 
-The kernel runs in privileged mode and provides controlled services to user-space programs through system calls.
+Now, when Linux boots, it needs a mechanism to initialize the system and start and manage essential services. On modern systemd-based distributions, this responsibility is handled by systemd.
 
-- When the system starts, the first process that runs On systems using systemd, systemd runs as PID 1. and along with it, the systemctl command is used to control and manage all system processes."
+# 3. Systemd
 
-<p align="center">
-  <img src="images/System-starting-process.jpg" alt="Linux Architecture" width="650">
-</p>
+systemd is the init and service manager. It is typically the first userspace process with PID 1. It starts and manages services, handles dependencies, and manages system startup and shutdown.
+
+`Example: systemctl status nginx`
+
+- systemctl: systemctl is the command-line utility used to interact with and manage systemd and its units, especially services.
+- Service: A background/long-running function, usually managed by a service manager
 
 
 ## Process Management Commands: 
@@ -127,28 +130,6 @@ A zombie:
 - Keeps a PID until it's cleaned up.
 
 
-# 3. Systemd
-
-`systemd` is the system and service manager used by many modern Linux distributions.
-
-After the kernel initializes the system, `systemd` normally starts as the first user-space process:
-
-Main responsibilities:
-
-- Starts services during boot
-- Stops and restarts services
-- Manages service dependencies
-- Monitors services
-- Manages system targets
-- Handles logging through `journald` (when configured)
-
-
-`systemd` → Actual system/service manager (PID 1)   
-systemctl → Command-line tool used to control `systemd`
-
-`Example: systemctl status nginx`  
-`systemctl start nginx`
-
 # User Space, Kernel Space & System Calls — Practical Commands
 
 | Command                  | Use Case                                                                       |
@@ -161,3 +142,17 @@ systemctl → Command-line tool used to control `systemd`
 | `cat /proc/<PID>/status` | Inspect process information from the kernel                                    |
 | `cat /proc/<PID>/maps`   | View a process's memory mappings                                               |
 | `vmstat 1`               | Monitor CPU, memory, swap, I/O, and system activity                            |
+
+
+## Process Creation
+
+- As we power on our system firstly BIOS loads the hardwares. BIOS is a pre-installed firamware on motherboad that is initialize the hardwares and perform POST(Power-On-Self-Test). Then GNU GRUB(grand Unified Bootloader) is a software that is load the operating system and our system starts to run. As soon as system runs the first process to run is systemd/init PID 1 and systemctl is controller that are attached with the process.  
+
+- Kernel is a machine that works on binary language we can't directly interact with that. so for communicate with the Kernel we have to give the instrucation to Shell and the talk with kernel. 
+The kernel runs in privileged mode and provides controlled services to user-space programs through system calls.
+
+- When the system starts, the first process that runs On systems using systemd, systemd runs as PID 1. and along with it, the systemctl command is used to control and manage all system processes."
+
+<p align="center">
+  <img src="images/System-starting-process.jpg" alt="Linux Architecture" width="630">
+</p>
