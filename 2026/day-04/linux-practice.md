@@ -87,7 +87,7 @@ Output:
 
 - journalctl -u shows logs related to a specific systemd service.
 
-### 6. Follow SSH logs in real time
+### 7. Follow SSH logs in real time
 
 `journalctl -u ssh -f`
 
@@ -98,9 +98,9 @@ Output:
 
 - `-f` follows new log entries as they are generated.
 
-Key Takeways:
+## Key Takeways:
 
-Process → Service → Logs
+### Process → Service → Logs
 
 - `ps / pgrep` → inspect the process
 - `systemctl` → inspect the service
