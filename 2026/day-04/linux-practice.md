@@ -6,7 +6,7 @@
 
 Look for something like:
 
-Output: 
+Output:  
 `ssh.service`  
 `nginx.service`  
 `cron.service`  
