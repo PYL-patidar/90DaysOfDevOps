@@ -7,9 +7,9 @@
 Look for something like:
 
 Output: 
-`ssh.service  <br>
-nginx.service  <br>
-cron.service`
+`ssh.service`
+`nginx.service`
+`cron.service`
 
 I choose `ssh` service
 
