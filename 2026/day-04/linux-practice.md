@@ -28,17 +28,6 @@ Output
 `pgrep -a sshd`
 
 Output:
-`680 sshd: /usr/sbin/sshd -D -o AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized_keys %u %f -o AuthorizedKeysCommandUser ec2-instance-connect [listener] 0 of 10-100 startups
-1032 sshd-session: ubuntu [priv]
-1151 sshd-session: ubuntu@pts/0
-1576 sshd-session: ubuntu [priv]
-1631 sshd-session: ubuntu@pts/1
-1720 sshd-session: ubuntu [priv]
-1776 sshd-session: ubuntu@pts/2
-2412 sshd-session: ubuntu [priv]
-2535 sshd-session: ubuntu@pts/3
-2618 sshd-session: ubuntu [priv]
-2674 sshd-session: ubuntu@pts/4`
 
 <img width="1892" height="443" alt="Screenshot (27)" src="https://github.com/user-attachments/assets/dbcb364c-6eeb-4bbb-8f94-f9c7162f1a3d" />
 
