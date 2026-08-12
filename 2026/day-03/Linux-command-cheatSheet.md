@@ -1,20 +1,26 @@
-Process Managment commands
- 1) ps--> display the selected active processes
- 2) ps aux--> give the active processes snapshot in detailed
- 3) top--> display real-time running processes
- 4) htop--> real-time processes with allows to scroll verically & horizontally
- 5) kill --> used to kill a perticuler process
+# Linux Commands cheatsheet
 
-Networking commands <br>
+## Process Managment commands
 
- 6) ip --> give ip address for a perticular device
- 7) ping--> Test the network connectivity to send ICMP data packets
- 8) ifconfig --> Display the status of the currently active interfaces
- 9) curl--> transfer data to server using url
- 10) dig --> perform DNS lookups and display report of the DNS servers
- 11) nslookup <domain> → Query DNS server
+ 1) `ps` --> display the selected active processes
+ 2) `ps aux` --> give the active processes snapshot in detailed
+ 3) `top` --> display real-time running processes
+ 4) `htop` --> real-time processes with allows to scroll verically & horizontally
+ 5) `kill` --> used to kill a perticuler process
+ 6) `pgrep` --> find process by its name
+
+## Networking Commands
+
+ 7) `ip` --> give ip address for a perticular device
+ 8) `ping` --> Test the network connectivity to send ICMP data packets
+ 9) `ifconfig` --> Display the status of the currently active interfaces
+ 10) `ss` --> Show sockets/connections
+ 11) `curl` --> transfer data to server using url
+ 12) `dig` --> perform DNS lookups and display report of the DNS servers
+ 13) `nslookup` <domain> → Query DNS server
+ 14) `tracerooute` --> Trace network path
      
- File system commands<br>
+ ## File System Commands
  
  12) mkdir --> make a directory
  13) touch --> create a file
