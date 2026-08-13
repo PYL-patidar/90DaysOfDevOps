@@ -23,7 +23,7 @@ Observation:
    - System is running `Ubuntu 26.04 LTS`.
 
 Output: 
-<img width="1510" height="727" alt="Screenshot (30)" src="https://github.com/user-attachments/assets/9fee81c7-1fdf-47a1-ae6d-ddd897eae6d0" />
+<img width="1110" height="527" alt="Screenshot (30)" src="https://github.com/user-attachments/assets/9fee81c7-1fdf-47a1-ae6d-ddd897eae6d0" />
 
 
 ## 2. Filesystem Sanity:
