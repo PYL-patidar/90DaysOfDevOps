@@ -180,18 +180,7 @@ Increase the level of investigation if the problem continues.
 
 If the issue appears to be process-related and further investigation is required:
 
-sudo strace -p <PID>
+`sudo strace -p <PID>`
 
 Use the PID of the relevant process and collect the output for further analysis.
 
-3. Trace the problematic process
-
-If the issue appears to be process-related and further investigation is required:
-
-sudo strace -p <PID>
-
-Use the PID of the relevant process and collect the output for further analysis.
-
-Quick Troubleshooting Flow
-
-Environment → Filesystem → CPU/Memory → Disk/I/O → Network → Logs → Findings → Next Action
