@@ -1,15 +1,24 @@
-<h2>Ways to Create text files </h2> <br>
-1. By touch command <br>
-2. By vim text editor <br>
-<br>
+## Ways to Create text files
 
-<h2>Write some lines</h2> <br>
-echo "Line 1" > notes.txt <br>
-echo "Line 2" >> notes.txt <br>
-echo "Line 3" | tee -a notes.txt <br>
-<br>
+1. By touch command
+2. By vim text editor
 
-<h2>Display data of file</h2> <br>
-cat notes.txt <br>
-head -n 2 notes.txt <br>
-tail -n 2 notes.txt <br>
+## Write some text 
+echo "Line 1" > notes.txt  
+echo "Line 2" >> notes.txt  
+echo "Line 3" | tee -a notes.txt 
+
+Open text editor `vim <file-name>`
+Then,  
+change to the insert mode  
+write the text  
+For save  
+click `Esc`,   
+`:wq`  
+click enter  
+
+## Display data of file  
+
+cat notes.txt  
+head -n 2 notes.txt  
+tail -n 2 notes.txt  
