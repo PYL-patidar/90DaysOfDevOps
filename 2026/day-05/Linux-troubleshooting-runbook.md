@@ -60,7 +60,7 @@ Output:
 
 Output:
 
-<img width="1456" height="864" alt="Screenshot (43)" src="https://github.com/user-attachments/assets/0b7491d4-7440-4906-acfa-b865ae2fe2fe" />
+<img width="1156" height="564" alt="Screenshot (43)" src="https://github.com/user-attachments/assets/0b7491d4-7440-4906-acfa-b865ae2fe2fe" />
 
 Observation:
    - Observe target process/service.
