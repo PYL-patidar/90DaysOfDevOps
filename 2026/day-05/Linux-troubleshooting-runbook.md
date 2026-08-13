@@ -15,10 +15,11 @@ Perform a basic health check of the Linux system and verify the health of ssh se
 Observation: 
    -  Display all System Information such as kernel name, hostname, kernel release, kernel version, architecture and OS. 
 
-### Check 2: Print distribution-specific information
+### Check 2: Operating system information
    - `cat /etc/os-release`
 
 Observation: 
+   - Print distribution-specific information
    - System is running `Ubuntu 26.04 LTS`.
 
 Output: 
