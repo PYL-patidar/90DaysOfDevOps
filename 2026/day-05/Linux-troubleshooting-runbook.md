@@ -1,5 +1,23 @@
+# Linux Troubleshooting Runbook
+
+## 1. Environment Basics Checks:
+1) Run
+   `uname -a`
+
+2) Check
+   - Display all System Information
+
+3) If 
+
+
+
+
+
+
+
+
 <h3> A runbook for ssh service </h3>
-<br>
+
 Step by Step guide for troubleshooting a service <br>
 for record the output run a script "session.log" and then all commands run 
 <br>
