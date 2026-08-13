@@ -12,10 +12,9 @@ Open text editor `vim <file-name>`
 Then,  
 change to the insert mode  
 write the text  
-For save  
-click `Esc`,   
-`:wq`  
-click enter  
+For save,  
+click `Esc`,   `:wq`  
+click `Enter`  
 
 ## Display data of file  
 
