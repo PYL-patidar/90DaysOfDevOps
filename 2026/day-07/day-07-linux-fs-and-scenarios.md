@@ -1,5 +1,7 @@
-# -- Part 1 --
-# Linux File system hierachy
+# Day 07 – Linux File System Hierarchy & Scenario-Based Practice
+
+## Part 1
+## Linux File system hierarchy
 
 - `/`(root) :  The root directory (/) is the top-level directory of the entire Linux file system hierarchy, containing all system files, partitions, and user data.
 - `/root` :  The /root directory is the specific home directory for the root user (administrator).
