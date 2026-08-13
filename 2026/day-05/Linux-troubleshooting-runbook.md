@@ -156,3 +156,42 @@ Output:
 <img width="1432" height="637" alt="Screenshot (42)" src="https://github.com/user-attachments/assets/561501e5-79f0-4c59-b01d-2c1d63253d9f" />
 
 
+## If This Worsens
+
+If the SSH service or system condition becomes worse:
+
+1. Restart the service
+
+After checking the logs and confirming a restart is appropriate:
+
+`sudo systemctl restart ssh`
+
+Then verify:
+
+`systemctl status ssh`
+
+2. Collect more detailed logs
+
+`journalctl -u ssh --since "1 hour ago"`
+
+Increase the level of investigation if the problem continues.
+
+3. Trace the problematic process
+
+If the issue appears to be process-related and further investigation is required:
+
+sudo strace -p <PID>
+
+Use the PID of the relevant process and collect the output for further analysis.
+
+3. Trace the problematic process
+
+If the issue appears to be process-related and further investigation is required:
+
+sudo strace -p <PID>
+
+Use the PID of the relevant process and collect the output for further analysis.
+
+Quick Troubleshooting Flow
+
+Environment → Filesystem → CPU/Memory → Disk/I/O → Network → Logs → Findings → Next Action
