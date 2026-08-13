@@ -88,7 +88,7 @@ Observation:
 
 Output:
 
-<img width="1223" height="537" alt="Screenshot (36)" src="https://github.com/user-attachments/assets/b5878027-5089-4305-85a2-caa5b946f210" />
+<img width="1023" height="437" alt="Screenshot (36)" src="https://github.com/user-attachments/assets/b5878027-5089-4305-85a2-caa5b946f210" />
 
 ### Check 2: Log directory size
    - `du -sh /var/log`
