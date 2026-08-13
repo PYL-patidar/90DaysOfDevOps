@@ -153,6 +153,6 @@ Observation:
 
 Output:
 
-<img width="1732" height="837" alt="Screenshot (42)" src="https://github.com/user-attachments/assets/561501e5-79f0-4c59-b01d-2c1d63253d9f" />
+<img width="1432" height="637" alt="Screenshot (42)" src="https://github.com/user-attachments/assets/561501e5-79f0-4c59-b01d-2c1d63253d9f" />
 
 
