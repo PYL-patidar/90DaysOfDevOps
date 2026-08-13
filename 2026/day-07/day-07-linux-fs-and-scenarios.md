@@ -58,7 +58,7 @@ Why: To see the snapshot of currently active process
 - step 2: `htop`  
 Why: To see the currently active process in more formatted way  
 
-- step 3: `ps aux --sort=-%cpu | head -n 50`
+- step 3: `ps aux --sort=-%cpu | head -n 50`  
 Why: sort the output of current running process based on cpu usage  
 
 **Scenario 3**
