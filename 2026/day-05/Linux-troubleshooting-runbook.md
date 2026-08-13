@@ -42,7 +42,7 @@ Output:
 <img width="1410" height="296" alt="Screenshot (31)" src="https://github.com/user-attachments/assets/de5afc6a-16c9-48d4-bb60-2046d66bbe0e" />
 
 
-## CPU / Memory:
+## 3. CPU / Memory:
 
 ### Checks 1: Memory Usage
    - `free -h `
@@ -60,11 +60,11 @@ Output:
 
 Output:
 
-<img width="1468" height="932" alt="Screenshot (34)" src="https://github.com/user-attachments/assets/d46a9881-ec87-4a94-9b47-2b1d23f2cf64" />
+<img width="1456" height="864" alt="Screenshot (43)" src="https://github.com/user-attachments/assets/0b7491d4-7440-4906-acfa-b865ae2fe2fe" />
 
 Observation:
    - Observe target process/service.
-   - CPU and memory usage were normal/high during the check. No unusual resource-consuming process was observed.
+   - CPU and memory usage were normal during the check. No unusual resource-consuming process was observed.
 
 ### Check 3: Find target process and check its CPU/ Memory Usage
    - `pgrep -a sshd`
@@ -77,7 +77,7 @@ Output:
 
 <img width="1711" height="602" alt="Screenshot (35)" src="https://github.com/user-attachments/assets/30fa1f8d-289a-415f-b7cf-ca43fd06efd4" />
 
-## Disk / IO:
+## 4. Disk / IO:
 
 ### Check 1: Filesystem disk usage
    - `df -h`
@@ -96,24 +96,27 @@ Output:
 Observation: 
    - /var/log is currently using 41M of disk space.
 
-### Check 3: I/O Statistics
+### Check 3: Disk I/O activity
    - `iostat`
 
 Observation:
-   - Check the average CPU usage
-   - CPU idle= 99.79% -> which is healthy. iowait= 0.02% -> small percentage of CPU time waiting for I/O. system= 0.06% -> low. user= 0.12%. about 1% CPU time is spent on user processes. 
+   - CPU idle= 99.23% -> which is healthy.
+   - iowait= 0.18% -> small percentage of CPU time waiting for I/O.
+   - system= 0.18% -> low.
+   - user= 0.30%.
+   - about 1% CPU time is spent on user processes. 
 
 Output:
 
 <img width="1384" height="710" alt="Screenshot (38)" src="https://github.com/user-attachments/assets/84b665bc-5eba-4d9f-90e3-dcbe38cceb00" />
 
-## Network
+## 5. Network
 ### Check 1: Network connectivity
    - `ping`
 
 Observation:
-   - Network connectivity is working, with YOUR PACKET LOSS packet loss.
    - Send ICMP ECHO_REQUEST to network hosts.
+   - Network connectivity is working, with 0% packet loss.
 
 Output:
 
@@ -129,7 +132,7 @@ Output:
 
 <img width="1605" height="242" alt="Screenshot (40)" src="https://github.com/user-attachments/assets/9f6125c5-e129-4537-9e86-08eb95dce0bd" />
 
-## Logs
+## 6. Logs
 
 ### Check 1: SSH Service Logs 
    - `journalctl -u ssh -n 20`
@@ -138,19 +141,18 @@ Observation:
    - The last 50 SSH log entries show session opened for user ubuntu.
 
 Output:
+
 <img width="1740" height="635" alt="Screenshot (41)" src="https://github.com/user-attachments/assets/47228df4-e847-4d8a-aa76-915ebab06c2e" />
 
 ## Check 2: Check logs in /var/log/auth.log
    - `tail -n 20 /var/log/auth.log`
 
 Observation: 
+
    - Recent login attempts record. No suspicious activity detected.
 
 Output:
 
 <img width="1732" height="837" alt="Screenshot (42)" src="https://github.com/user-attachments/assets/561501e5-79f0-4c59-b01d-2c1d63253d9f" />
-
-
-Observation : Last 50 lines shows normal authentication attempts no errors or warnings.
 
 
