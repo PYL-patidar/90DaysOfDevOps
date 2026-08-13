@@ -1,88 +1,155 @@
 # Linux Troubleshooting Runbook
+## Target Service
 
-## 1. Environment Basics Checks:
-1) Run
-   `uname -a`
+Target: SSH `sshd`
 
-2) Check
-   - Display all System Information
-
-3) If 
+Purpose: 
+Perform a basic health check of the Linux system and verify the health of ssh service.
 
 
+## 1. Environment Basics:
+
+### Check 1: Kernel and system Information
+   - `uname -a`
+
+Observation: 
+   -  Display all System Information such as kernel name, hostname, kernel release, kernel version, architecture and OS. 
+
+### Check 2: Print distribution-specific information
+   - `cat /etc/os-release`
+
+Observation: 
+   - System is running `Ubuntu 26.04 LTS`.
+
+Output: 
+<img width="1510" height="727" alt="Screenshot (30)" src="https://github.com/user-attachments/assets/9fee81c7-1fdf-47a1-ae6d-ddd897eae6d0" />
 
 
+## 2. Filesystem Sanity:
+
+### Check 1: Create a temporary directory 
+   - `mkdir /temp/runbook-demo`
+
+ ### Check 2: Copy and verify the test directory 
+   - `cp /etc/hosts /tmp/runbook-demo/hosts-copy && ls -l /tmp/runbook-demo`
+
+Observation: 
+   -  Successfully created the temporary directory and copied /etc/hosts into it.
+
+Output:
+
+<img width="1410" height="296" alt="Screenshot (31)" src="https://github.com/user-attachments/assets/de5afc6a-16c9-48d4-bb60-2046d66bbe0e" />
 
 
+## CPU / Memory:
+
+### Checks 1: Memory Usage
+   - `free -h `
+
+Observation:
+   - System has 549Mi available memory and 0B swap usage.
+   - Memory usage is normal, with sufficient available memory and no significant swap usage.
+
+Output:
+
+<img width="1184" height="278" alt="Screenshot (33)" src="https://github.com/user-attachments/assets/f28b3ee9-9b41-4790-a073-4a6643a342cd" />
+
+### Check 2: Running processes
+   - `top`
+
+Output:
+
+<img width="1468" height="932" alt="Screenshot (34)" src="https://github.com/user-attachments/assets/d46a9881-ec87-4a94-9b47-2b1d23f2cf64" />
+
+Observation:
+   - Observe target process/service.
+   - CPU and memory usage were normal/high during the check. No unusual resource-consuming process was observed.
+
+### Check 3: Find target process and check its CPU/ Memory Usage
+   - `pgrep -a sshd`
+   - `ps -a pid,pcpu,pmem,comm -p <pid>`
+
+Observation: 
+   - The SSH process is using minimal CPU and memory during the check.
+
+Output: 
+
+<img width="1711" height="602" alt="Screenshot (35)" src="https://github.com/user-attachments/assets/30fa1f8d-289a-415f-b7cf-ca43fd06efd4" />
+
+## Disk / IO:
+
+### Check 1: Filesystem disk usage
+   - `df -h`
+
+Observation: 
+   - The root filesystem is using 21% of its available space. No filesystem is critically full.
+   - Root partition more than 70% Available 
+
+Output:
+
+<img width="1223" height="537" alt="Screenshot (36)" src="https://github.com/user-attachments/assets/b5878027-5089-4305-85a2-caa5b946f210" />
+
+### Check 2: Log directory size
+   - `du -sh /var/log`
+
+Observation: 
+   - /var/log is currently using 41M of disk space.
+
+### Check 3: I/O Statistics
+   - `iostat`
+
+Observation:
+   - Check the average CPU usage
+   - CPU idle= 99.79% -> which is healthy. iowait= 0.02% -> small percentage of CPU time waiting for I/O. system= 0.06% -> low. user= 0.12%. about 1% CPU time is spent on user processes. 
+
+Output:
+
+<img width="1384" height="710" alt="Screenshot (38)" src="https://github.com/user-attachments/assets/84b665bc-5eba-4d9f-90e3-dcbe38cceb00" />
+
+## Network
+### Check 1: Network connectivity
+   - `ping`
+
+Observation:
+   - Network connectivity is working, with YOUR PACKET LOSS packet loss.
+   - Send ICMP ECHO_REQUEST to network hosts.
+
+Output:
+
+<img width="1580" height="598" alt="Screenshot (39)" src="https://github.com/user-attachments/assets/e940dd2a-9174-4c40-b914-f63a1e729817" />
+
+### Check 2: Listening services
+   - `ss -tulpne`
+
+Observation:
+   - SSH is listening on port 22 and the expected network services are available.
+
+Output:
+
+<img width="1605" height="242" alt="Screenshot (40)" src="https://github.com/user-attachments/assets/9f6125c5-e129-4537-9e86-08eb95dce0bd" />
+
+## Logs
+
+### Check 1: SSH Service Logs 
+   - `journalctl -u ssh -n 20`
+
+Observation:
+   - The last 50 SSH log entries show session opened for user ubuntu.
+
+Output:
+<img width="1740" height="635" alt="Screenshot (41)" src="https://github.com/user-attachments/assets/47228df4-e847-4d8a-aa76-915ebab06c2e" />
+
+## Check 2: Check logs in /var/log/auth.log
+   - `tail -n 20 /var/log/auth.log`
+
+Observation: 
+   - Recent login attempts record. No suspicious activity detected.
+
+Output:
+
+<img width="1732" height="837" alt="Screenshot (42)" src="https://github.com/user-attachments/assets/561501e5-79f0-4c59-b01d-2c1d63253d9f" />
 
 
-<h3> A runbook for ssh service </h3>
+Observation : Last 50 lines shows normal authentication attempts no errors or warnings.
 
-Step by Step guide for troubleshooting a service <br>
-for record the output run a script "session.log" and then all commands run 
-<br>
-<h2>Environment Basics:</h2>
-Command : uname -a <br>
-Output : Linux ip-172-31-32-251 6.14.0-1018-aws #18~24.04.1-Ubuntu SMP Mon Nov 24 19:46:27 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux <br>
-Observed : display all system informatioon <br>
-<br>
-Command : lsb_release -a <br>
-Output :
-Distributor ID: Ubuntu
-Description:    Ubuntu 24.04.3 LTS
-Release:        24.04
-Codename:       noble
-<br>
-Observerd : print distribution-specific information
-<br>
-<h2>Filesystem sanity:</h2>
-Command : mkdir /tmp/runbook-demo<br>
-Output : Directory created Successfully<br>
-<br>
-Command : cp /etc/hosts /tmp/runbook-demo/hosts-copy && ls -l /tmp/runbook-demo <br>
-Output : -rw-r--r-- 1 ubuntu ubuntu 221 Feb 10 09:18 hosts-copy <br>
-Observed : Copied the files from /etc/hosts. Filesystem is writable.
-<br>
-<h2>CPU / Memory </h2>
-Command : ps -o pid, pcpu, pmem, comm -p <pid> <br>
-Output : PID %CPU %MEM COMMAND 5501  0.0  0.0 sshd<br>
-Observed : Process running and CPU & Memory usage is negligible. <br>
-<br>
-Command : free -h <br>
-OutPut : Total: 914Mi, Used: 350Mi, Free: 270Mi, shared: 2.7Mi <br>
-Observed : Sufficient Memory Available <br>
-<br>
-<h2>Disk / IO</h2>
-Command : df -h <br>
-Output : /dev/root    6.8G size, 1.9G Used, 4.9G Avail  29% use, / Mounted on <br>
-Observed : Root partition more than 70% Available <br>
-  <br>
-Command : iostat <br>
-Output : avg-cpu:  %user   %nice  %system %iowait  %steal   %idle 
-                   0.12    0.00   0.06    0.02     0.01    99.79 
-  <br>
-Observation : CPU idle= 99.79% -> which is healthy. iowait= 0.02% -> small percentage of CPU time waiting for I/O. system= 0.06% -> low. user= 0.12%. about 1% CPU time is spent on user processes. 
-<br>
-<h2>Network </h2><br>
-Command : sudo ss -tulpn | grep sshd<br>
-OutPut : tcp   LISTEN 0      4096              0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=899,fd=3),("systemd",pid=1,fd=181))
-  <br>
-Observation : ssh is listening on port 22 <br>
-<br>
-Command : ping <ip-address> <br>
-Output : 64 bytes from 172.31.32.251: icmp_seq=36 ttl=64 time=0.028 ms
-         64 bytes from 172.31.32.251: icmp_seq=37 ttl=64 time=0.025 ms
-         ......
-  <br>
-Observed : send ICMP ECHO_REQUEST to network hosts  <br>
-<br>
-<h2>Logs</h2> <br>
-Commands: journalctl -u ssh -n 50 <br >
-Observation : Last 50 lines shows normal authentication attempts no errors or warnings. <br>
-  <br>
-Command : tail -n 50 /var/log/<file>.log <br>
-Observation : Recent login attempts record. No suspicious activity detected. <br>
-<br>
-<h2>If this worse</h2> <br>
-Restart SSH service and monitor logs <br>
 
