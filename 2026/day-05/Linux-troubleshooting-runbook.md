@@ -108,7 +108,7 @@ Observation:
 
 Output:
 
-<img width="1384" height="710" alt="Screenshot (38)" src="https://github.com/user-attachments/assets/84b665bc-5eba-4d9f-90e3-dcbe38cceb00" />
+<img width="1184" height="510" alt="Screenshot (38)" src="https://github.com/user-attachments/assets/84b665bc-5eba-4d9f-90e3-dcbe38cceb00" />
 
 ## 5. Network
 ### Check 1: Network connectivity
