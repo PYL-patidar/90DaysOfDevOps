@@ -1,10 +1,12 @@
-## Networking Task
+# Networking
 
 - OSI layers (L1–L7) vs TCP/IP stack (Link, Internet, Transport, Application)?
 
 ## OSI Layers :
+
 OSI (Open Systems Interconnection) introduced a 7-layer architecture for data transfer between network nodes.  
-(7) Application layers
+
+### (7) Application layers
    - User by end-user application
    - Provides network services like:
      - HTTP/HTTPS(web)
@@ -12,15 +14,15 @@ OSI (Open Systems Interconnection) introduced a 7-layer architecture for data tr
      - SMTP(main)
    - Example : web browser
 
-(6) Presentation layers
+### (6) Presentation layers
    - Encryption and Compress data
    - Example : Encryption (SSL/TLS), data encoding (JPEG, MP3)
      
-(5) Session layers
+### (5) Session layers
    - Manages sessions (connections) between devices
    - Example : Session login, logout management
      
-(4) Transport layers
+### (4) Transport layers
    - Ensures reliable data transfer
    - Handles:
      - Segmentation
@@ -28,17 +30,17 @@ OSI (Open Systems Interconnection) introduced a 7-layer architecture for data tr
      - Error recovery
    - Protocols: TCP, UDP
      
-(3) Network layers
+### (3) Network layers
    - Handles routing and logical addressing
    - Finds the best path for data
    - Protocol: IP (Internet Protocol)
    - Device: Router
      
-(2) Data Link layers
+### (2) Data Link layers
    - Handles physical addressing (MAC address)
    - Device: Switch
      
-(1) Physical layers
+### (1) Physical layers
    - Responsible for actual data transmission in bits (0s & 1s)
    - Includes cables, voltages, connectors
    - Device: Hub, cables
