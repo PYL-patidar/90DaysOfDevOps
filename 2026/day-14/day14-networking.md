@@ -3,7 +3,7 @@
 - OSI layers (L1–L7) vs TCP/IP stack (Link, Internet, Transport, Application)?
 
 ## OSI Layers :
-OSI (Open Systems Interconnection) introduced a 7-layer architecture for data transfer between network nodes.
+OSI (Open Systems Interconnection) introduced a 7-layer architecture for data transfer between network nodes.  
 (7) Application layers
    - User by end-user application
    - Provides network services like:
