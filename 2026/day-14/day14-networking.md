@@ -74,10 +74,10 @@ The TCP/IP model consists of 4 layers:
 - `ping <target>` Test connection by sending ICMP packets (Internet Layer)
 - `traceroute <target>`Trace packet path (Internet)
 - `tracepath <target>`(Internet layer)
-- `ss -tulpn` Socket Statistics of Ports & services(Internet layer)
-- `netstat -tulpn` Ports & connections (Internet)
-- `dig/nslookup` DNS lookup troubleshoot DNS problems (Application)
-- `curl` Test web service (Application)
+- `ss -tulpn` Socket Statistics of Ports & services(Transport layer)
+- `netstat -tulpn` Ports & connections (Transport layer)
+- `dig/nslookup` DNS lookup troubleshoot DNS problems (Application layer & Internet layer)
+- `curl` Test web service (Application layer)
 - `nc -zv localhost <port>` (nc)netcat Test ports, create TCP/UDP connections (Transport layer)
 
 
