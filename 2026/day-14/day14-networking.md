@@ -47,22 +47,23 @@ OSI (Open Systems Interconnection) introduced a 7-layer architecture for data tr
 
 ## TCP/IP Stack Layers
 
-The TCP/IP model consists of 4 layers:
-(4) Application Layer
+The TCP/IP model consists of 4 layers:  
+
+### (4) Application Layer
   - Provides network services to user applications
   - Examples: HTTP, HTTPS, FTP, SMTP, DNS, SSH
 
-(3) Transport Layer
+### (3) Transport Layer
    - Ensures end-to-end communication and reliability
    - Protocols: TCP, UDP
 
-(2) Internet Layer
+### (2) Internet Layer
    - Responsible for logical addressing and routing
    - Protocol: IP (Internet Protocol)
    - Example: IP, ICMP
    - Device: Router
 
-(1) Network Access Layer
+### (1) Network Access Layer
    - Handles physical transmission and MAC addressing
    - Combines OSI Physical + Data Link layers
    - Examples: Ethernet, Wi-Fi
@@ -78,10 +79,12 @@ The TCP/IP model consists of 4 layers:
 - `dig/nslookup` DNS lookup troubleshoot DNS problems (Application)
 - `curl` Test web service (Application)
 - `nc -zv localhost <port>` (nc)netcat Test ports, create TCP/UDP connections (Transport layer)
-- 
-Q1) Which command gives you the fastest signal when something is broken?<br>
-ANS : ping 
 
-Q2) What layer (OSI/TCP-IP) would you inspect next if DNS fails? If HTTP 500 shows up?<br>
+
+Q1) Which command gives you the fastest signal when something is broken?  
+ANS : ping  
+
+
+Q2) What layer (OSI/TCP-IP) would you inspect next if DNS fails? If HTTP 500 shows up?  
 ANS: Application layer 7 for HTTP error an DNS fails check DNS server, resolver config and App logs, backend, DB.
 
