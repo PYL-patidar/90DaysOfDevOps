@@ -1,5 +1,5 @@
 # Scenario Based Questions 
-# Task 1
+## Task 1
 
 ## Q1. What is Infrastructure as Code(Iac)? Why does it matter in DevOps?
 
@@ -35,7 +35,7 @@ Terraform is declarative because we define the desired state of our infrastuctur
 Terraform is also Cloud-agnostic because it supports multiple cloud providers such as AWS, Azure, GCP through different providers.
 
 
-# Task 2
+## Task 2
 ## Install Terraform and Configure AWS
 1. Install terraform:
 ```bash
@@ -70,7 +70,7 @@ aws configure
 # Enter your Access Key ID, Secret Access Key, default region (e.g., ap-south-1), output format (json)
 ```
 
-# Task 3
+## Task 3
 ## Write First Configuration -- S3 Bucket Create
 
 ## Q. What did terraform init download? What does the .terraform/ directory contain?
@@ -81,7 +81,7 @@ The .terraform/ directory stores downloaded providers, modules, and internal met
 
 Terraform also creates .terraform.lock.hcl, which locks provider versions and checksums to maintain consistency across environments.
 
-# Task 4
+## Task 4
 ## Create EC2 Instance
 
 ## Q. How does Terraform know the S3 bucket already exists and only the EC2 instance needs to be created?
@@ -92,7 +92,7 @@ Terraform determines what already exists and what needs to be created by compari
 3) Real Infrastructure (AWS): What actually exists in AWS?
 
 Terraform uses its configuration files and state file to understand the desired and currently tracked infrastructure. During terraform plan, it refreshes the tracked resource information from the cloud provider and compares it with the configuration. Based on the differences, Terraform determines which resources need to be created, updated, or destroyed.
-# Task 5
+## Task 5
 ## Understand the State files
 Terraform tracks everything it creates in a state file. Time to inspect it.
 ## Q. What information does the state file store about each resource?
@@ -123,5 +123,7 @@ Main reasons
 3. Version control issues: State files change frequently, creating unnecessary Git history.
 4. Infrastructure information exposure: It may reveal resource IDs, IP addresses, and infrastructure details.
 
-# Task 6
+## Task 6
 ## Modify Plan and Destroy 
+
+```terraform destroy``` is used to destroy all infrastructure resources managed by the current Terraform configuration and state.
