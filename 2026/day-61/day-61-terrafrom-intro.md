@@ -81,6 +81,7 @@ The .terraform/ directory stores downloaded providers, modules, and internal met
 
 Terraform also creates .terraform.lock.hcl, which locks provider versions and checksums to maintain consistency across environments.
 
+
 ## Task 4
 ## Create EC2 Instance
 
@@ -92,6 +93,11 @@ Terraform determines what already exists and what needs to be created by compari
 3) Real Infrastructure (AWS): What actually exists in AWS?
 
 Terraform uses its configuration files and state file to understand the desired and currently tracked infrastructure. During terraform plan, it refreshes the tracked resource information from the cloud provider and compares it with the configuration. Based on the differences, Terraform determines which resources need to be created, updated, or destroyed.
+
+![terraform-apply-image](images/terraform-apply.png)
+![bucket-running-image](images/bucket-running.png)
+![instance-running-image](images/instance-running.png)
+
 ## Task 5
 ## Understand the State files
 Terraform tracks everything it creates in a state file. Time to inspect it.
