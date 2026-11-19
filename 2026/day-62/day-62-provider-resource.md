@@ -135,7 +135,7 @@ terraform init -> terraform validate -> terraform plan -> terraform apply auto-a
 
 Now configured infrasturce has provisioned.
 
-## Task 3: Understand Implecit Dependencies 
+## Task 3: Understand Implicit Dependencies 
 
 ### Q How does Terraform know to create the VPC before the subnet?
 
