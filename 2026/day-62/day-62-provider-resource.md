@@ -155,6 +155,9 @@ aws_internet_gateway           aws_vpc                            aws_vpc.main.i
 aws_route_table                aws_vpc and aws_internet_gateway   aws_vpc.main.id, aws_internet_gateway.main.id
 aws_route_table_association    aws_subnet and aws_route_table     aws_subnet.public.id, aws_route_table.public.id
 ```
+
+## Task 4: Add a Security Group and EC2 Instance
+
 ## Task 5: Explicit Dependencies with depends_on
 
 `depends_on` is a Terraform meta-argument used to explicitly define a dependency between resources.
