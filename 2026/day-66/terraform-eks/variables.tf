@@ -1,0 +1,32 @@
+variable "region" {
+  type        = string
+  description = "Select a perticular region for entire eks"
+  default     = "ap-south-1"
+}
+
+variable "cluster_name" {
+  type        = string
+  description = "cluster name"
+  default     = "terraweek-eks"
+}
+
+variable "cluster_version" {
+  type    = string
+  default = "1.31"
+}
+
+variable "node_instance_type" {
+  type    = string
+  default = "t3.small"
+}
+
+variable "node_desired_count" {
+  type    = number
+  default = 2
+}
+
+variable "vpc_cidr" {
+  type    = string
+  default = "10.0.0.0/16"
+
+}
