@@ -294,7 +294,7 @@ Different Name tags per environment: terraweek-dev-server, terraweek-staging-ser
 
 Three separate VPCs with different CIDR ranges
 
-![IMAGES](IMAGES/VPC-running.png)
+![images](images/VPC-running.png)
 
 
 ## Task 6: Destroy All Environments
