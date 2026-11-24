@@ -220,28 +220,28 @@ module "ec2" {
 Environment-specific tfvars:
 
 `dev.tfvars:`
-
-`vpc_cidr      = "10.0.0.0/16"
+```
+vpc_cidr      = "10.0.0.0/16"
 subnet_cidr   = "10.0.1.0/24"
 instance_type = "t3.micro"
 ingress_ports = [22, 80]
-`
+```
 
 `staging.tfvars:`
-
-`vpc_cidr      = "10.1.0.0/16"
+```
+vpc_cidr      = "10.1.0.0/16"
 subnet_cidr   = "10.1.1.0/24"
 instance_type = "t3.small"
 ingress_ports = [22, 80, 443]
-`
+```
 
 `prod.tfvars:`
-
-`vpc_cidr      = "10.2.0.0/16"
+```
+vpc_cidr      = "10.2.0.0/16"
 subnet_cidr   = "10.2.1.0/24"
 instance_type = "m7i-flex.large"
 ingress_ports = [80, 443]
-`
+```
 
 Notice: dev allows SSH, prod does not. Different CIDRs prevent overlap. Instance types scale up per environment.
 
@@ -325,11 +325,11 @@ Verify: Is your AWS account completely clean?
 
 1. File structure -- separate files for providers, variables, outputs, main, locals
 2. State management -- always use remote backend, enable locking, enable versioning
-3. Variables -- never hardcode, use tfvars per environment, validate with validation blocks
+3. Variables -- never hardcode, use tfvars per environment, validate with `validation` blocks
 4. Modules -- one concern per module, always define inputs/outputs, pin registry module versions
-5. Workspaces -- use for environment isolation, reference terraform.workspace in configs
+5. Workspaces -- use for environment isolation, reference `terraform.workspace` in configs
 6. Security -- .gitignore for state and tfvars, encrypt state at rest, restrict backend access
-7. Commands -- always run plan before apply, use fmt and validate before committing
+7. Commands -- always run `plan` before `apply`, use `fmt` and `validate` before committing
 8. Tagging -- tag every resource with project, environment, and managed-by
 9. Naming -- consistent prefix pattern: <project>-<environment>-<resource>
 10. Cleanup -- always terraform destroy non-production environments when not in use
