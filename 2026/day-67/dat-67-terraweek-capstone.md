@@ -309,8 +309,10 @@ terraform destroy -var-file="staging.tfvars"
 
 terraform workspace select dev
 terraform destroy -var-file="dev.tfvars"
-Verify in the AWS console -- all VPCs, instances, security groups, and gateways should be gone.
 ```
+
+Verify in the AWS console -- all VPCs, instances, security groups, and gateways should be gone.
+
 
 Delete the workspaces:
 ```hcl
@@ -318,8 +320,9 @@ terraform workspace select default
 terraform workspace delete dev
 terraform workspace delete staging
 terraform workspace delete prod
-Verify: Is your AWS account completely clean?
 ```
+
+Verify: Is your AWS account completely clean?
 
 # Document Best Practices
 
